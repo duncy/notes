@@ -21,7 +21,7 @@ html{
     font-family: Tahoma, Verdana, sans-serif;
     color: rgb(190, 190, 190);
     cursor: default;
-    font-size: 99%;
+    font-size: 100%;
 }
 
 /* Style for hyperlinked text */
@@ -59,7 +59,7 @@ body > header > nav {
 /* Style for header (direct child of body) */
 body > header {
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 8rem;
     padding-bottom: 2.5rem;
     max-width: 99.5vw;
     color: rgb(250, 250, 250);
@@ -245,11 +245,13 @@ footer ul li, body > header > nav ul li {
 
     body > header > h1 {
         font-size: 25vw;
+        line-height: 8rem;
     }
   }
 
   @media (max-width: 800px) {
     body > header > h1 {
         font-size: 30vw;
+        line-height: 6rem;
     }
   }
