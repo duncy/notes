@@ -68,7 +68,7 @@ body > header {
 /* Style for body > header h1 (main page title) */
 body > header > h1 {
     display: inline;
-    font-size: 12.5rem;
+    font-size: 15vw;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     line-height: 10rem;
@@ -78,7 +78,7 @@ body > header > h1 {
 
 /* Style for body > header h2 (page subtitle) */
 body > header > h2 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 100;
     padding-top: 1rem;
 }
@@ -242,7 +242,14 @@ footer ul li, body > header > nav ul li {
     #python {
         max-width: none;
     }
+
     body > header > h1 {
-        font-size: 9rem;
+        font-size: 25vw;
+    }
+  }
+
+  @media (max-width: 800px) {
+    body > header > h1 {
+        font-size: 30vw;
     }
   }
