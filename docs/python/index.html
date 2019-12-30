@@ -2,116 +2,119 @@
 <html lang="en-NZ">  
     <head>
         <meta charset = "UTF-8">
-        <meta name="description" content="Python tutorial">
-        <meta name="keywords" content="Python">
+        <meta name="keywords" content="Duncan Fryer Tutor Python Computer Science Data Science">
         <meta name="author" content="Duncan Fryer">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="stylesheets/style.css">
-        <link rel="stylesheet" href="stylesheets/style-home.css">
-        <title>Learn Python</title>
+        <link rel="stylesheet" href="../stylesheets/style.css">
+        <link rel="stylesheet" href="stylesheets/style-python.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <title>Tutor - Learn Python - Getting Started</title>
     </head>
     <body>
-        <!-- The video -->
-        <video autoplay muted loop>
-            <source src="videos/snake.webm" type="video/webm">
-        </video>
-      
-        <!-- Header and nav (top of page) -->
         <header>
-            <h1>Learn Python</h1>
+            <nav>
+                <nav-todo-item
+                    v-for="item in navList"
+                    v-bind:todo="item"
+                    v-bind:key="item.id">
+                </nav-todo-item>
+            </nav>
+            <h1>Tutor</h1>
+            <h2>Learn Python - Getting Started</h2>
         </header>
         <section>
-            <article>
-                <nav>
-                    <ul>
-                        <h3>Chapter One</h3>
-                        <li>
-                            <details>
-                                <summary>
-                                    <a href="chapter-one/getting-started.html">Getting Started</a>
-                                </summary>
-                                <ul>
-                                    <li>
-                                        <details>
-                                            <summary>
-                                                    <a href="chapter-one/getting-started.html#Installation">Installation</a>
-                                            </summary>
-                                                <ul>
-                                                    <li><a href="chapter-one/getting-started.html#Windows-store">Windows store</a></li>
-                                                    <li><a href="chapter-one/getting-started.html#Installer-from-pythonorg">Installer from python.org</a></li>
-                                                    <li><a href="chapter-one/getting-started.html#Python-for-phones">Python for phones</a></li>
-                                                </ul>
-                                        </details>
-                                    </li>
-                                    <li>
-                                        <details>
-                                            <summary>
-                                                    <a href="chapter-one/getting-started.html#Other-software-to-check-out">Other software to check out</a>
-                                            </summary>
-                                                <ul>
-                                                    <li><a href="chapter-one/getting-started.html#Editors">Editors</a></li>
-                                                    <li><a href="chapter-one/getting-started.html#Formatters-and-linters">Formatters and linters</a></li>
-                                                </ul>
-                                        </details>
-                                    </li>
-
-                                </ul>
-                            </details>
-                        </li>
-                        <li>
-                            <details>
-                                <summary>
-                                    <a href="chapter-one/what-is-python.html">What is Python?</a>
-                                </summary>
-                                <ul>
-                                    <li>
-                                        <a href="chapter-one/what-is-python.html#Python-the-Interpreter">Python the Interpreter</a>
-                                    </li>
-                                    <li>
-                                        <a href="chapter-one/what-is-python.html#The-Python-shell">The Python shell</a>
-                                    </li>
-                                </ul>
-                            </details>
-                        </li>
-                        <li></li>
-                        <li><a class="disabled">Expressions and Variables</a></li>
-                        <li><a class="disabled">Conditionals and Statements</a></li>
-                        <li><a class="disabled">Functions</a></li>
-                    </ui>
-                </nav>
-                <nav>
-                    <ul>
-                        <h3>Chapter Two</h3>
-                        <li><a class="disabled">Types and Type Aliasing</a></li>
-                        <li><a class="disabled">Objects and Methods</a></li>
-                        <li><a class="disabled">Literals and Mutability</a></li>
-                        <li><a class="disabled">Importing and Error handling</a></li>
-                    </ui>
-                </nav>
-                <nav>
-                    <ul>
-                        <h3>Chapter Three</h3>
-                        <li><a class="disabled">Tuples and Lists</a></li>
-                        <li><a class="disabled">Sets and Dictionaries</a></li>
-                        <li><a class="disabled">Indexing, Slicing and Aliasing</a></li>
-                        <li><a class="disabled">Looping and Iteration</a></li>
-                        <li><a class="disabled">Nesting and Recursion</a></li>
-                    </ui>
-                </nav>
-                <nav>
-                    <ul>
-                        <h3>Chapter Four</h3>
-                        <li><a class="disabled">File processing</a></li>
-                        <li><a class="disabled">Classes</a></li>
-                    </ui>
-                </nav>   
-            </article>
+            <nav>
+                <h1>Chapter One</h1>
+                <ul>
+                <nav-chapter-one-todo-item
+                    v-for="item in navList"
+                    v-bind:todo="item"
+                    v-bind:key="item.id">
+                </nav-chapter-one-todo-item>
+                </ul>
+            </nav>
+            <section>
+                <section>
+                    <header>
+                        <h1 id="Installation">Installation</h1>
+                    </header>
+                    <section class="columns">
+                        <article>
+                            <p>Let's start your introduction to Python by making sure you have installed it correctly.</p>
+                            <h1 id="Windows-store">Windows store</h1>
+                            <p>If you're running Windows 10 you can install <a href="https://www.microsoft.com/store/productId/9NJ46SX7X90P">Python via the windows store</a>, which will automatically update your Python to the most current version. You don't have to do this, it's not what I've done personally, but it's worth checking out.</p>
+                            <h1 id="Installer-from-pythonorg">Installer from python.org</h1>
+                            <p>Make sure you have the latest version of the installer:</p>
+                            <ul>
+                                <li><a href="https://www.python.org/downloads/windows/">Windows</a></li>
+                                <li><a href="https://www.python.org/downloads/mac-osx/">Mac OS X</a></li>
+                                <li><a href="https://www.python.org/downloads/source/">Linux</a></li>
+                            </ul>
+                            <h1 id="Python-for-phones">Python for phones</h1>
+                            <p>I personally haven't programmed on my phone before, but I understand that some people don't have access to a computer or just want to program on their mobile device, and for them they can use apps like:</p>
+                            <ul>
+                                <li><a href="https://www.microsoft.com/store/productId/9NBLGGH083NZ">Python 3 for Windows Phone</li>
+                                <li><a href="https://play.google.com/store/apps/details?id=org.qpython.qpy3">QPython3 for Android</a></li>
+                                <li><a href="https://apps.apple.com/us/app/python3ide/id1357215444">Python3IDE for iOS</a></li>
+                            </ul>
+                            <p>Please note that I don't program on my phone so these apps might not be the best out there.</p>
+                            <p>I'm personally running version 3.7.3, but any version after 3.6 as far as I'm aware will work for what I'll be doing, but to be on the safe side, try to make sure you're on the latest version.</p>
+                            <p>When you go to install it make sure you check the box that adds Python to PATH. It's on one of the first slides at the bottom of the installer and is usually unchecked by default.</p>
+                            <picture>
+                                <img src="images/path.png" alt='Image of Python installer with "Add Python 3.7 to PATH" circled'/>
+                            </picture>
+                            <p>This is important as it means you can run Python scripts, access the Python shell, and most importantly for later it'll mean you can use pip from the command prompt.</p>
+                        </article>
+                    </section>
+                </section>
+                <br>
+                <section>
+                    <header>
+                        <h1 id="Editors-and-Linters">Editors and Linters</h1>
+                    </header>
+                    <section>
+                        <article>
+                            <p>Now that you have Python installed and in your systems PATH environment variable (The windows store version does this, don't worry). We can begin. Feel free to use whatever editor you prefer, it doesn't really matter. If don't know which one to use for Python, here is a list of popular editors:</p>
+                            <ul>
+                                <li><a href="https://www.jetbrains.com/pycharm/">Pycharm</a></li>
+                                <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+                                <li><a href="https://notepad-plus-plus.org/">Notepad++</a></li>
+                                <li><a href="https://wingware.com/">Wing IDLE</a></li>
+                                <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
+                            </ul>
+                            <p>There's more than this out there, but these are all good. And it doesn't really matter, the default editor will work fine.</p>
+                            <h1 id="Formatters-and-linters">Formatters and linters</h1>
+                        <p>If you have other people working on your code with you, or if you end up taking an extended break from your code, having it be readable and easier to understand is a godsend.</p>
+                        <p>You can check some formatters out here:</p>
+                        <ul>
+                            <li><a href="https://github.com/Python/black">Black - The Uncompromising Code Formatter</a></li>
+                            <li><a href="https://www.pylint.org/">Pylint</a></li>
+                        </ul>
+                        <p>Programming is about expressing your creative thought into logic that can be understood by a computer, it's why I personally find it so fun. So don't worry if you're not using any of this. Try to remember that, it's supposed to be fun.</p>
+                        </article>
+                    </section>
+                </section>
+            </section>
         </section>
         <footer>
-            Duncan Fryer 2019
+            Duncan Fryer 2019 - 2020
             <ul>
-                <li><a href="https://github.com/alt1f923">GitHub</a></li>
+                <footer-todo-item
+                    v-for="item in footerList"
+                    v-bind:todo="item"
+                    v-bind:key="item.id">
+                </footer-todo-item>
             </ul>
-        </footer>  
+        </footer>
+
+        <script src="../scripts/nav.js"></script>
+        <script src="scripts/nav-chapter-one.js"></script>
+        <script src="../scripts/footer.js"></script>
     </body>
 </html>
+
+
+
+                        
+                        
+                        

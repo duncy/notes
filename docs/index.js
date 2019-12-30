@@ -1,1 +1,0 @@
-// And there was silence for there was no JavaScript, and the world could rest in peace 
