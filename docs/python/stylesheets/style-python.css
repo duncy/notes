@@ -26,6 +26,10 @@ body > section > section, body > section > nav {
     display: block;
 }
 
+article {
+    flex: 1;
+}
+
 body > section > section {
     flex: 1;
 }
@@ -69,15 +73,50 @@ body > section > nav {
 picture > img {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    display:block;
-    margin:auto;
     max-width: 35vw;
     width: 100%;
     height: 100%;
 }
 
+iframe, picture > img {
+    display: block;
+    margin: auto;
+}
+
+
+iframe {
+    margin-top: 3rem;
+    width: 28vw;
+    height: 21vw;
+}
+
 body > section > nav > h1 {
     font-weight: bold;
+}
+
+
+/* Style for code blocks */
+article code, article span {
+    font-size: 1.5rem;
+}
+
+article code {
+    font-size: 1.5rem;
+    background: rgb(220, 220, 220);
+    padding: 0.25rem;
+}
+
+article span {
+    background:  rgb(40, 40, 40);
+    border: 2px solid rgb(190, 190, 190);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin:auto;
+    display: block;
+    color: rgb(190, 190, 190);
+    font-family: monospace;
+    overflow: auto;
+    width: 95%;
 }
 
 /* Hamburger menu */
@@ -90,5 +129,14 @@ body > section > nav > h1 {
 
     picture > img {
         max-width: 80vw;
+    }
+
+  }
+
+  @media (max-width: 1200px) {
+    iframe {
+        margin-top: 3rem;
+        width: 60vw;
+        height: 45vw;
     }
   }

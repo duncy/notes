@@ -196,6 +196,7 @@ footer ul li, body > header > nav ul li {
 }
 
 /* Style for python article (Change later with introduction of more content options) */
+
 #python {
     margin-top: 2vw;
     margin-bottom: 2vw;
@@ -207,18 +208,28 @@ footer ul li, body > header > nav ul li {
     background-color: rgb(40, 40, 40);
     transition: 0.5s;
     min-height: 16vw;
+    display: table;
 }
+    
 
-#python > h1 {
+#python > div {
+    margin: 0;
+    display:table-cell;
+    vertical-align: middle;
     text-align: center;
 }
 
-#python > h1 {
+
+#python > div > h1 {
+    text-align: center;
     padding-top: 1rem;
 }
 
+#python > div > p {
+    text-align: left;
+}
 
-#python > a {
+#python > div > a {
     transition: 0.5s;
     margin-bottom: 1rem;
     margin: auto;
@@ -232,7 +243,7 @@ footer ul li, body > header > nav ul li {
     text-align: center;
 }
 
-#python > a:hover {
+#python > div > a:hover {
     cursor: pointer;
     background: rgb(80, 160, 225);
 }
