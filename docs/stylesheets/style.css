@@ -119,10 +119,6 @@ body > section > section > section > header {
     display: block;
 }
 
-body > section > section > section {
-    padding-top: 3rem;
-    padding-bottom: 5rem;
-}
 
 /* Style for flexboxes in the child section */
 section > section > section > section {

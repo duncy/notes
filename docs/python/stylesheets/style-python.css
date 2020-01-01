@@ -97,11 +97,11 @@ body > section > nav > h1 {
 
 /* Style for code blocks */
 article code, article span {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 article code {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     background: rgb(220, 220, 220);
     padding: 0.25rem;
 }
@@ -111,12 +111,26 @@ article span {
     border: 2px solid rgb(190, 190, 190);
     border-radius: 0.5rem;
     padding: 1rem;
-    margin:auto;
+    margin: auto;
     display: block;
     color: rgb(190, 190, 190);
     font-family: monospace;
     overflow: auto;
     width: 95%;
+}
+
+article > p > b {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+pre {
+    margin: 0;
+}
+
+article > ul > li {
+    padding: 0.2rem;
+    font-size: 1.2rem;
 }
 
 /* Hamburger menu */
