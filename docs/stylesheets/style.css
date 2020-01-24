@@ -145,6 +145,7 @@ article {
     height: 17.25rem;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+    max-width: 83.5vw;
 }
 
 section h1, section h2 {
