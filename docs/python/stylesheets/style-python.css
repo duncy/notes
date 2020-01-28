@@ -187,9 +187,14 @@ picture > img {
 
 
 
+@media screen and (max-width: 1400px) {
+    section > section > div {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }    
+}
 
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 900px){
     /* Show Hamburger */
     header nav label {
       display: inline;
@@ -284,10 +289,4 @@ picture > img {
         width: 60vw;
         height: 45vw;
     }
-
-    .flex-container {
-        -webkit-flex-direction: column;
-        flex-direction: column;
-    }
-
   }
