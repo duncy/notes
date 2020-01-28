@@ -10,7 +10,8 @@ header nav label{
 
 header nav {
     background: rgb(240, 240, 100);
-    position: inline-block;
+    max-width: 100vw;
+    display: none;
 }
 
 header nav button {
@@ -21,17 +22,6 @@ header nav button {
     display: none;
 }
 
-/* .hamburger-content {
-    background-color: red;
-    position: absolute;
-    left: 0;
-    top: 0;
-
-}
-
-.hamburger-content {
-    width: 25rem;
-} */
 
 vue > nav {
     text-align: center;
@@ -199,13 +189,13 @@ picture > img {
 
 
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 768px){
     /* Show Hamburger */
     header nav label {
       display: inline;
       color: white;
       font-style: normal;
-      font-size: 2rem;
+      font-size: 2vw;
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
       padding-left: 1rem;
@@ -223,7 +213,7 @@ picture > img {
     header nav a {
         position: relative;
         color: black;
-        font-size: 1.5rem;
+        font-size: 6vw;
     }
 
     header nav a:hover {
@@ -248,6 +238,7 @@ picture > img {
     }
     header > nav h1 > a {
         color: black;
+        font-size: 10vw;
     }
 
     vue > nav > button {
@@ -256,7 +247,6 @@ picture > img {
 
     main > nav{
         display: none;
-
     }
 
     /* Break down menu items into vertical */
@@ -276,7 +266,7 @@ picture > img {
     header nav button {
         display: block;
         margin: 2rem;
-        font-size: 1.5rem;
+        font-size: 6vw;
         margin-top: 0;
 
     }
