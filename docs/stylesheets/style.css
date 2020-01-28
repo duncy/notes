@@ -1,13 +1,13 @@
-/* Import OpenSans with weight of 800 for body > header */
+/* Import OpenSans with weight of 800 for header */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
 
 /* Colour text selection */
-body > section > section > section *::selection {
-    background: rgb(100, 100, 100);
+body > section > section > section *::selection, main > section *::selection{
+    background: rgb(50, 50, 50);
     color: #fff;
 }
 
-body > section > section > section a::selection {
+body > section > section > section a::selection, main > section a::selection {
     color: rgb(185, 125, 55);
 }
 
@@ -15,13 +15,13 @@ body > section > section > section a::selection {
     visibility: hidden;
 }
 
+
 /* Style for html */
 html{
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(60, 60, 60);
     font-family: Tahoma, Verdana, sans-serif;
     color: rgb(190, 190, 190);
     cursor: default;
-    font-size: 100%;
 }
 
 /* Style for hyperlinked text */
@@ -35,29 +35,45 @@ a:hover {
     cursor: pointer;
 }
 
-/* Style for all elements that touch the edge of the screen */
-body > section > section > section, body > header > nav, body > footer, body > header {
-    margin-left: 0.25vw;
-    margin-right: 0.25vw;
-}
-
-/* Removing unwanted margins */
-body, h1, h2{
-    margin: 0;
-}
-
 /* Style for nav (direct child of body) */
-body > header > nav {
+header > nav li > a{
     text-align: right;
-    padding-right: 2rem;
-    padding-top: 2rem;
-    position: absolute;
+    margin: 2rem;
     right: 0;
+    top: 0;
+    line-height: 1rem;
+}
+
+/* Style for header h1 (main page title) */
+header > nav h1 > a{
+    display: inline;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    margin: 2rem;
+    line-height: 1rem;
+    left: 0;
     top: 0;
 }
 
+header nav a {
+    position: absolute;
+}
+
+header > nav > h1 a:hover {
+    color: white;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+
+
+
 /* Style for header (direct child of body) */
-body > header {
+header {
     text-align: center;
     padding-top: 8rem;
     max-width: 99.5vw;
@@ -65,20 +81,11 @@ body > header {
     padding-bottom: 10rem;
 }
 
-/* Style for body > header h1 (main page title) */
-body > header > h1 {
-    display: inline;
-    font-size: 15vw;
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    line-height: 10rem;
-    padding-bottom: 1rem;
-    padding-top: 2rem;
-}
 
-/* Style for body > header h2 (page subtitle) */
-body > header > h2 {
-    font-size: 1rem;
+
+/* Style for header h2 (page subtitle) */
+header > h1 {
+    font-size: 5rem;
     font-weight: 100;
     padding-top: 1rem;
 }
@@ -88,16 +95,12 @@ article {
 }
 
 /* Style for making sure there is space on both sides inside the sections */
-body > header, body > section > section > section > section > article {
+header, body > section > section > section > section > article {
     font-size: 1rem;
     margin-top: 0;
     height: fit-content;
 }
 
-body > header, body > section > section > section  {
-    padding-left: 8vw;
-    padding-right: 8vw;
-}
 
 
 /* Style for the container section */
@@ -166,7 +169,7 @@ footer {
     font-size: 1rem;
     flex-shrink: 0;
     color: rgb(150, 150, 150);
-    padding-top: 1rem;
+    padding-top: 3rem;
     padding-bottom: 1.25rem;
 }
 
@@ -182,12 +185,7 @@ footer > ul > li:nth-child(even){
     padding-right: 1rem;
 }
 
-body > header > nav > a:nth-child(odd)  {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-}
-
-footer ul li, body > header > nav ul li {
+footer ul li, header > nav ul li {
     display: inline;
     margin: 0;
 }
@@ -255,15 +253,3 @@ footer ul li, body > header > nav ul li {
         max-width: none;
     }
 
-    body > header > h1 {
-        font-size: 25vw;
-        line-height: 8rem;
-    }
-  }
-
-  @media (max-width: 800px) {
-    body > header > h1 {
-        font-size: 30vw;
-        line-height: 6rem;
-    }
-  }

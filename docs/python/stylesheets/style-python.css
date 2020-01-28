@@ -1,20 +1,148 @@
+body {
+    margin: 0.25vw;
+}
+header nav label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+header nav {
+    background: rgb(240, 240, 100);
+    position: inline-block;
+}
+
+header nav button {
+    display: none;
+}
+
+#hamburger {
+    display: none;
+}
+
+/* .hamburger-content {
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+
+.hamburger-content {
+    width: 25rem;
+} */
+
+vue > nav {
+    text-align: center;
+    padding: .5rem;
+    font-size: 1.2rem;
+}
+
+vue > nav > button {
+    display: inline;
+    color: white;
+}
+
+main {
+    color: black;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+main > nav {
+    background: rgb(240, 240, 100);
+    max-width: 15vw;
+    margin-right: 0.25vw;
+}
+
+
+main > nav > ul {
+    list-style-type: none;
+    font-size: 1.3rem;
+    padding: 1vw;
+}
+
+
+/* button */
+button {
+    text-decoration: none;
+    border: none;
+    font-size: inherit;
+    background: none;
+}
+
+main > nav button {
+    color: black;
+}
+
+button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:disabled {
+    text-decoration: none;
+    color: gray;
+}
+
+button:disabled:hover {
+    text-decoration: none;
+    cursor: initial;
+}
+
+main > section > section{
+    background: rgb(240, 240, 240);
+    font-size: 1.3rem;
+    padding-bottom: 2rem;
+}
+
+main > section > section:not(:first-child){
+    margin-top: 1rem;
+}
+
+main > section > section > h1 {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+main > section > section > div > div {
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+}
+
+main > section > section > div > div  > h1 {
+    font-size: 1.6rem;
+}
+
 /* Style for hyperlinked text */
-body > section > section > section a {
+section a {
     text-decoration: none;
     color: rgb(215, 90, 40);
 }
 
-body > section > section > section a:hover {
+section a:hover {
     color: rgb(250, 180, 150);
     cursor: pointer;
 }
 
-body > section > section > section a::selection {
+section a::selection {
     color: rgb(200, 220, 255);
 }
 
-body > section > section > section {
-    background: rgb(240, 240, 240) !important;
+/* Flex properties */
+.flex-container{
+    display: flex;
+}
+
+.flex-box{
+    flex: 1
 }
 
 .columns {
@@ -22,64 +150,13 @@ body > section > section > section {
       flex-direction: column;
 }
 
-body > section > section, body > section > nav {
+/* Display block */
+iframe, img, span{
     display: block;
 }
 
-article {
-    flex: 1;
-}
-
-body > section > section {
-    flex: 1;
-}
-
-body > section {
-    display: flex;
-}
-
-body > section > nav {
-    max-width: 14vw;
-    margin-left: 0.25vw;
-    background: rgb(240, 240, 100);
-    flex: 1;
-}
-
-body > section > nav > ul > li > a , body > section > nav > h1, body > section{
-    color: black;
-    font-size: 1.2rem;
-}
-
-body > section > nav > ul > li > a:hover {
-    text-decoration: underline;
-    color: initial;
-}
-
-body > section > nav > h1{
-    text-align: center;
-    padding-top: 1rem;
-}
-
-body > section > nav > ul {
-    list-style-type: none;
-    display: inline;
-}
-
-body > section > nav {
-    padding-left: 1vw;
-    padding-right: 1vw;
-}
-
-picture > img {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    max-width: 35vw;
-    width: 100%;
-    height: 100%;
-}
-
-iframe, picture > img {
-    display: block;
+/* Margin auto */
+iframe, img, span {
     margin: auto;
 }
 
@@ -90,62 +167,126 @@ iframe {
     height: 21vw;
 }
 
-body > section > nav > h1 {
-    font-weight: bold;
-}
-
-
 /* Style for code blocks */
-article code, article span {
+code, span {
     font-size: 1.3rem;
 }
 
-article code {
+code {
     font-size: 1.3rem;
     background: rgb(220, 220, 220);
     padding: 0.25rem;
 }
 
-article span {
+span {
     background:  rgb(40, 40, 40);
     border: 2px solid rgb(190, 190, 190);
     border-radius: 0.5rem;
     padding: 1rem;
-    margin: auto;
-    display: block;
     color: rgb(190, 190, 190);
     font-family: monospace;
     overflow: auto;
-    width: 95%;
+    width: 90%;
 }
 
-article > p > b {
-    font-weight: bold;
-    font-size: 1.1rem;
+picture > img {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    max-width: 35vw;
 }
 
-pre {
-    margin: 0;
-}
 
-article > ul > li {
-    padding: 0.2rem;
-    font-size: 1.2rem;
-}
 
-/* Hamburger menu */
-@media (max-width: 1400px) {
-    body > section > nav {
-        max-width: 0;
+
+
+@media screen and (max-width: 1400px){
+    /* Show Hamburger */
+    header nav label {
+      display: inline;
+      color: white;
+      font-style: normal;
+      font-size: 2rem;
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    header nav label:checked{
+        color: black;
+    }
+    
+    header nav label:hover {
+        cursor: pointer;
+    }
+
+    header nav a {
+        position: relative;
+        color: black;
+        font-size: 1.5rem;
+    }
+
+    header nav a:hover {
+        color: black;
+    }
+
+    header nav li > a:hover {
+        text-decoration: underline;
+    }
+
+    header nav {
         margin: 0;
-        padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 100vh;
     }
 
     picture > img {
         max-width: 80vw;
     }
+    header > nav h1 > a {
+        color: black;
+    }
 
+    vue > nav > button {
+        font-size: 3rem;
+    }
+
+    main > nav{
+        display: none;
+
+    }
+
+    /* Break down menu items into vertical */
+    header nav ul li {
+      display: block;
+      margin-top: 1rem;
+    }
+  
+    /* Toggle show/hide menu on checkbox click */
+    header nav ul {
+      display: none;
+      padding: 0;
+      margin-top: 5rem;
+      text-align: left;
+    }
+
+    header nav button {
+        display: block;
+        margin: 2rem;
+        font-size: 1.5rem;
+        margin-top: 0;
+
+    }
+
+    header nav input:checked ~ ul {
+      display: block;
+    }
   }
+
+  
 
   @media (max-width: 1200px) {
     iframe {

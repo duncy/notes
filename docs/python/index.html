@@ -7,115 +7,77 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../stylesheets/style.css">
         <link rel="stylesheet" href="stylesheets/style-python.css">
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-        <title>Tutor - Learn Python - Getting Started</title>
+        <title>Tutor - Learning Python</title>
     </head>
     <body>
-        <header>
-            <nav>
-                <nav-todo-item
-                    v-for="item in navList"
-                    v-bind:todo="item"
-                    v-bind:key="item.id">
-                </nav-todo-item>
-            </nav>
-            <h1>Tutor</h1>
-            <h2>Learn Python - Getting Started</h2>
-        </header>
-        <section>
-            <nav>
-                <h1>Chapter One</h1>
-                <ul>
-                <nav-chapter-one-todo-item
-                    v-for="item in navList"
-                    v-bind:todo="item"
-                    v-bind:key="item.id">
-                </nav-chapter-one-todo-item>
-                </ul>
-            </nav>
-            <section>
-                <section>
-                    <header>
-                        <h1 id="Installation">Installation</h1>
-                    </header>
-                    <section class="columns">
-                        <article>
-                            <p>Let's start your introduction to Python by making sure you have installed it correctly.</p>
-                            <h1 id="Windows-store">Windows store</h1>
-                            <p>If you're running Windows 10 you can install <a href="https://www.microsoft.com/store/productId/9NJ46SX7X90P">Python via the windows store</a>, which will automatically update your Python to the most current version. You don't have to do this, it's not what I've done personally, but it's worth checking out.</p>
-                            <h1 id="Installer-from-pythonorg">Installer from python.org</h1>
-                            <p>Make sure you have the latest version of the installer:</p>
+        <noscript>Please enable JavaScript in your browser.</noscript>
+        <vue>
+            <header>
+                <nav>
+                    
+                    <!-- <hamburger>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="hamburger-content">
+                            <h1><a href="https://tutor.duncy.nz">Tutor.Duncy.nz</a></h1>
+                            <a href="https://github.com/alt1f923/tutor">Report typos</a>
                             <ul>
-                                <li><a href="https://www.python.org/downloads/windows/">Windows</a></li>
-                                <li><a href="https://www.python.org/downloads/mac-osx/">Mac OS X</a></li>
-                                <li><a href="https://www.python.org/downloads/source/">Linux</a></li>
+                                <topic-nav
+                                    v-for="item in topicNav"
+                                    :item="item"
+                                    :key="item.id">
+                                </topic-nav>
                             </ul>
-                            <h1 id="Python-for-phones">Python for phones</h1>
-                            <p>I personally haven't programmed on my phone before, but I understand that some people don't have access to a computer or just want to program on their mobile device, and for them they can use apps like:</p>
-                            <ul>
-                                <li><a href="https://www.microsoft.com/store/productId/9NBLGGH083NZ">Python 3 for Windows Phone</li>
-                                <li><a href="https://play.google.com/store/apps/details?id=org.qpython.qpy3">QPython3 for Android</a></li>
-                                <li><a href="https://apps.apple.com/us/app/python3ide/id1357215444">Python3IDE for iOS</a></li>
-                            </ul>
-                            <p>Please note that I don't program on my phone so these apps might not be the best out there.</p>
-                            <p>I'm personally running version 3.7.3, but any version after 3.6 as far as I'm aware will work for what I'll be doing, but to be on the safe side, try to make sure you're on the latest version.</p>
-                            <p>When you go to install it make sure you check the box that adds Python to PATH. It's on one of the first slides at the bottom of the installer and is usually unchecked by default.</p>
-                            <picture>
-                                <img src="images/path.png" alt='Image of Python installer with "Add Python 3.7 to PATH" circled'/>
-                            </picture>
-                            <p>This is important as it means you can run Python scripts, access the Python shell, and most importantly for later it'll mean you can use pip from the command prompt.</p>
-                        </article>
-                    </section>
+                        </div>
+                        
+                    </hamburger> -->
+                    <label for="hamburger">&#9776;</label>
+                    <input type="checkbox" id="hamburger"/>
+                    <ul>
+                        <li><h1><a href="https://tutor.duncy.nz">Tutor.Duncy.nz</a></h1></li>
+                        <li><a href="https://github.com/alt1f923/tutor">Report typos</a></li>
+                        <topic-nav
+                        v-for="item in topicNav"
+                        :item="item"
+                        :key="item.id">
+                    </topic-nav>
+                    </ul>
+                </nav>        
+                <h1>Learning Python</h1>
+                <h2>{{ title }}</h2>
+            </header>
+            <next-previous-buttons></next-previous-buttons>
+            <main class="flex-container">       
+                <nav class="flex-box">
+                    <ul>
+                    <topic-nav
+                        v-for="item in topicNav"
+                        :item="item"
+                        :key="item.id">
+                    </topic-nav>
+                    </ul>
+                </nav>
+                <section class="flex-container flex-box columns">
+                    <sections
+                    v-for="item in sections"
+                    :item="item"
+                    :key="item.id">
+                    </sections>
                 </section>
-                <br>
-                <section>
-                    <header>
-                        <h1 id="Editors-and-Linters">Editors and Linters</h1>
-                    </header>
-                    <section>
-                        <article>
-                            <h1 id="Editors">Editors</h1>
-                            <p>Now that you have Python installed and in your systems PATH environment variable (The windows store version does this, don't worry). We can begin. Feel free to use whatever editor you prefer, it doesn't really matter. If don't know which one to use for Python, here is a list of popular editors:</p>
-                            <ul>
-                                <li><a href="https://www.jetbrains.com/pycharm/">Pycharm</a></li>
-                                <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
-                                <li><a href="https://notepad-plus-plus.org/">Notepad++</a></li>
-                                <li><a href="https://wingware.com/">Wing IDLE</a></li>
-                                <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
-                            </ul>
-                            <p>There's more than this out there, but these are all good. And it doesn't really matter, the default editor will work fine.</p>
-                            <h1 id="Formatters-and-linters">Formatters and linters</h1>
-                        <p>If you have other people working on your code with you, or if you end up taking an extended break from your code, having it be readable and easier to understand is a godsend.</p>
-                        <p>You can check some formatters out here:</p>
-                        <ul>
-                            <li><a href="https://github.com/Python/black">Black - The Uncompromising Code Formatter</a></li>
-                            <li><a href="https://www.pylint.org/">Pylint</a></li>
-                        </ul>
-                        <p>Programming is about expressing your creative thought into logic that can be understood by a computer, it's why I personally find it so fun. So don't worry if you're not using any of this. Try to remember that, it's supposed to be fun.</p>
-                        </article>
-                    </section>
-                </section>
-            </section>
-        </section>
+            </main>
+            <next-previous-buttons></next-previous-buttons>
+        </vue>
         <footer>
             Duncan Fryer 2019 - 2020
             <ul>
-                <footer-todo-item
-                    v-for="item in footerList"
-                    v-bind:todo="item"
-                    v-bind:key="item.id">
-                </footer-todo-item>
+                <li><a :href="https://github.com/alt1f923">GitHub</a></li>
+                <li><a :href="https://twitter.com/le_epic_weasel">Twitter</a></li>
+                <li><a :href="https://discordapp.com">Дункан#5963</a></li>
             </ul>
         </footer>
-
-        <script src="../scripts/nav.js"></script>
-        <script src="scripts/nav-chapter-one.js"></script>
-        <script src="../scripts/footer.js"></script>
+        <script src="../scripts/vue.min.js"></script>
+        <script src="../scripts/vuex.min.js"></script>
+        <script src="scripts/main.js"></script>
     </body>
 </html>
-
-
-
-                        
-                        
-                        
