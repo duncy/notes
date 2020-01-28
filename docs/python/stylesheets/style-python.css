@@ -284,4 +284,10 @@ picture > img {
         width: 60vw;
         height: 45vw;
     }
+
+    .flex-container {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
   }
