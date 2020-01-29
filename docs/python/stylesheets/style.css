@@ -368,6 +368,17 @@ h1, h2 {
     header {
         background: none;
         box-shadow: none;
+        position: relative;
+        margin-top: 10vh;
+        height: fit-content;
+    }
+
+    header h1 {
+        font-size: 6vh;
+    }
+
+    header h2{
+        font-size: 4vh;
     }
 
     main > nav {
