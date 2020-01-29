@@ -5,24 +5,26 @@
         <meta name="keywords" content="Duncan Fryer Tutor Python Computer Science Data Science">
         <meta name="author" content="Duncan Fryer">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../stylesheets/style.css">
-        <link rel="stylesheet" href="stylesheets/style-python.css">
+        <link rel="stylesheet" href="stylesheets/style.css">
         <title>Tutor - Learning Python</title>
     </head>
     <body>
         <noscript>Please enable JavaScript in your browser.</noscript>
         <vue>
             <header>
+                <label for="hamburger">&#9776;</label>
+                <input type="checkbox" id="hamburger"/>
                 <nav>
-                    <label for="hamburger">&#9776;</label>
-                    <input type="checkbox" id="hamburger"/>
                     <ul>
                         <li><h1><a href="https://tutor.duncy.nz">Tutor.Duncy.nz</a></h1></li>
                         <li><a href="https://github.com/alt1f923/tutor">Report typos</a></li>
+                    </ul>
+                    <h1>Table of Contents</h1>
+                    <ul>
                         <topic-nav
-                        v-for="item in topicNav"
-                        :item="item"
-                        :key="item.id">
+                            v-for="item in topicNav"
+                            :item="item"
+                            :key="item.id">
                     </topic-nav>
                     </ul>
                 </nav>        
@@ -32,6 +34,7 @@
             <next-previous-buttons></next-previous-buttons>
             <main class="flex-container">       
                 <nav class="flex-box">
+                    <h1>Table of Contents</h1>
                     <ul>
                     <topic-nav
                         v-for="item in topicNav"
@@ -42,9 +45,9 @@
                 </nav>
                 <section class="flex-container flex-box columns">
                     <sections
-                    v-for="item in sections"
-                    :item="item"
-                    :key="item.id">
+                        v-for="item in sections"
+                        :item="item"
+                        :key="item.id">
                     </sections>
                 </section>
             </main>
@@ -53,9 +56,9 @@
         <footer>
             Duncan Fryer 2019 - 2020
             <ul>
-                <li><a :href="https://github.com/alt1f923">GitHub</a></li>
-                <li><a :href="https://twitter.com/le_epic_weasel">Twitter</a></li>
-                <li><a :href="https://discordapp.com">Дункан#5963</a></li>
+                <li><a href="https://github.com/alt1f923">GitHub</a></li>
+                <li><a href="https://twitter.com/le_epic_weasel">Twitter</a></li>
+                <li><a href="https://discordapp.com">Дункан#5963</a></li>
             </ul>
         </footer>
         <script src="../scripts/vue.min.js"></script>

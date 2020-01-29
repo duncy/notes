@@ -1,39 +1,14 @@
-/* Import OpenSans with weight of 800 for header */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
-
-/* Colour text selection */
-body > section > section > section *::selection, main > section *::selection{
-    background: rgb(50, 50, 50);
-    color: #fff;
-}
-
-body > section > section > section a::selection, main > section a::selection {
-    color: rgb(185, 125, 55);
-}
-
-*::selection {
-    visibility: hidden;
-}
 
 
-/* Style for html */
-html{
-    background-color: rgb(60, 60, 60);
-    font-family: Tahoma, Verdana, sans-serif;
-    color: rgb(190, 190, 190);
-    cursor: default;
-}
 
-/* Style for hyperlinked text */
-a {
-    text-decoration: none;
-    color: rgb(195, 195, 250);
-}
 
-a:hover {
-    color: rgb(230, 230, 250);
-    cursor: pointer;
-}
+
+
+
+
+
+
+
 
 /* Style for nav (direct child of body) */
 header > nav li > a{
@@ -102,21 +77,6 @@ header, body > section > section > section > section > article {
 }
 
 
-
-/* Style for the container section */
-body > section {
-    max-width: 99.5vw;
-    color: #fff;
-}
-
-body > section > section > section:nth-child(1) {
-    background: rgb(85, 75, 75);
-}
-
-body > section > section > section:nth-child(2) {
-    background: rgb(75, 75, 85);
-}
-
 body > section > section > section > header {
     padding-top: 3rem;
     display: block;
@@ -136,120 +96,4 @@ section > section > section > section > article:nth-child(1) {
 section > section > section > section > article:nth-child(2) {
     margin-left: 0.75rem;
 }
-
-/* Style for sections */ 
-section > section > section h1 {
-    font-size: 2rem;
-}
-
-/* Style for article (Website content) */
-article {
-    padding: 1rem;
-    height: 17.25rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    max-width: 83.5vw;
-}
-
-section h1, section h2 {
-    font-weight: normal;
-}
-
-article h1 {
-    font-size: 1.8rem !important;
-}
-
-article > p {
-    font-size: 1.2rem;
-}
-
-/* Style for footer */
-footer {
-    text-align: center;
-    font-size: 1rem;
-    flex-shrink: 0;
-    color: rgb(150, 150, 150);
-    padding-top: 3rem;
-    padding-bottom: 1.25rem;
-}
-
-/* Style the unordered list in the footer */
-footer ul{
-    margin: 0;
-    padding: 0;
-}
-
-/* Style for navigation lists in the footer and nav */
-footer > ul > li:nth-child(even){
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-footer ul li, header > nav ul li {
-    display: inline;
-    margin: 0;
-}
-
-/* Style for python article (Change later with introduction of more content options) */
-
-#python {
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    margin-left: 1rem;
-    min-width: 20vw;
-    max-width: 20vw;
-    color: #fff;
-    border: 0.25vw solid rgb(40, 40, 40);
-    background-color: rgb(40, 40, 40);
-    transition: 0.5s;
-    min-height: 16vw;
-    display: table;
-}
-    
-
-#python > div {
-    margin: 0;
-    display:table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
-
-#python > div > h1 {
-    text-align: center;
-    padding-top: 1rem;
-}
-
-#python > div > p {
-    text-align: left;
-}
-
-#python > div > a {
-    transition: 0.5s;
-    margin-bottom: 1rem;
-    margin: auto;
-    display: block;
-    padding: 1rem;
-    font-size: 1rem;
-    width: 6rem;
-    border: none;
-    color: #fff;
-    background: rgb(50, 135, 200);
-    text-align: center;
-}
-
-#python > div > a:hover {
-    cursor: pointer;
-    background: rgb(80, 160, 225);
-}
-
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 1200px) {
-    section > section > section > section {
-      -webkit-flex-direction: column;
-      flex-direction: column;
-    }
-    #python {
-        max-width: none;
-    }
 

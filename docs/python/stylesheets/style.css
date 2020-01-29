@@ -1,0 +1,382 @@
+/* Import OpenSans with weight of 800 for header */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: rgb(50, 50, 50);
+    font-family: Tahoma, Verdana, sans-serif;
+    color: rgb(230, 230, 230);
+    font-size: 2.25vh;
+}
+
+body {
+    margin: 0.25vw;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100%;
+    background: rgb(100, 100, 230);
+    text-align: center;
+    overflow: hidden;
+}
+
+header h1 {
+    margin-top: 2vh;
+    font-size: 3vh;
+}
+
+header h2 {
+    font-size: 2vh;
+}
+
+/* Hamburger menu */
+header nav, #hamburger{
+    display: none;
+}
+
+header nav {
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    height: 100vh;
+    text-align: left;
+    padding: 5%;
+}
+
+/* Style for header h1 (main page title) */
+header > nav h1 > a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+}
+
+header > nav a {
+    color: black;
+}
+
+header > nav a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+header input:checked ~ nav {
+    display: unset;
+}
+
+header > label {
+    position: absolute;
+    left: 0;
+    margin-left: 5%;
+    font-size: 5vh;
+    line-height: 10vh;
+}
+
+header > nav {
+    background: rgb(240, 240, 100);
+    max-width: 80vw;
+    color: black;
+}
+
+header > nav > ul {
+    margin-top: 1rem;
+}
+
+vue > nav {
+    text-align: center;
+    padding: .5rem;
+    font-size: 1.2rem;
+}
+
+vue > nav:first-of-type {
+    margin-top: 15vh;
+}
+
+main {
+    color: black;
+}
+
+main, header {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+main > nav {
+    display: none;
+    background: rgb(240, 240, 100);
+    max-width: 15vw;
+    margin-right: 0.25vw;
+}
+
+main > nav > h1 {
+    text-align: center;
+    padding: 1vw;
+}
+
+main > nav > ul {
+    list-style-type: none;
+    padding: 2vw;
+}
+
+main > section > section{
+    background: rgb(240, 240, 240);
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+
+main > section > section:not(:first-child){
+    margin-top: 1rem;
+}
+
+main > section > section > h1 {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+main > section > section > div {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+} 
+
+main > section > section > div > div {
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+}
+
+main > section > section > div > div > h1 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+main > section > section > div > div > p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+main > section > section > div > div > ul {
+    margin: 1rem;
+}
+
+main > section > section > div > div > ul > li {
+    margin-left: 2rem;
+    list-style-type: square;
+}
+
+/* Style for footer */
+footer {
+    text-align: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    color: rgb(150, 150, 150);
+    padding-top: 3rem;
+    padding-bottom: 1.25rem;
+}
+
+/* Style the unordered list in the footer */
+footer ul{
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for navigation lists in the footer and nav */
+footer > ul > li:nth-child(even){
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+footer ul li{
+    display: inline;
+    margin: 0;
+}
+
+footer li, header li {
+    list-style-type: none;
+}
+
+/* Images */
+picture > img {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 90vw;
+}
+
+/* Buttons */
+button {
+    text-decoration: none;
+    border: none;
+    font-size: inherit;
+    background: none;
+}
+
+vue > nav > button {
+    display: inline;
+    font-size: 2rem;
+    color: white;
+    margin: 1rem;
+}
+
+main > nav button {
+    color: black;
+}
+
+button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:disabled {
+    text-decoration: none;
+    color: gray;
+}
+
+button:disabled:hover {
+    text-decoration: none;
+    cursor: initial;
+}
+
+
+/* Flex properties */
+.flex-container{
+    display: flex;
+}
+
+.flex-box{
+    flex: 1
+}
+
+.columns {
+    -webkit-flex-direction: column;
+      flex-direction: column;
+}
+
+/* Display block */
+iframe, img, span{
+    display: block;
+}
+
+/* Margin auto */
+iframe, img, span {
+    margin: auto;
+}
+
+/* Iframes */
+iframe {
+    margin-top: 1.5rem;
+    width: 90vw;
+    height: 67vw;
+}
+
+/* Style for code blocks */
+code, span {
+    font-size: 1rem;
+}
+
+code {
+    background: rgb(220, 220, 220);
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+span {
+    background:  rgb(40, 40, 40);
+    border: 2px solid rgb(190, 190, 190);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: rgb(190, 190, 190);
+    font-family: monospace;
+    overflow: auto;
+    width: 90%;
+}
+
+/* Style for hyperlinked text */
+a {
+    text-decoration: none;
+    color: rgb(195, 195, 250);
+}
+
+a:hover {
+    color: rgb(230, 230, 250);
+    cursor: pointer;
+}
+
+/* Style for section hyperlinked text */
+section a {
+    text-decoration: none;
+    color: rgb(215, 90, 40);
+}
+
+section a:hover {
+    color: rgb(250, 180, 150);
+    cursor: pointer;
+}
+
+section a::selection {
+    color: rgb(200, 220, 255);
+}
+
+/* Colour text selection */
+*::selection {
+    visibility: hidden;
+}
+
+main > section *::selection{
+    background: rgb(100, 100, 100);
+    color: white;
+}
+
+/* Headings */
+h1, h2 {
+    font-weight: 100;
+} 
+
+
+@media screen and (min-width: 1100px){
+    /* Iframes */
+    iframe {
+        width: 45vw;
+        height: 33.5vw;
+    }
+
+    /* Images */
+    picture > img {
+        width: 45vw;
+    }
+
+    main > section > section > div {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    } 
+
+    /* Hamburger menu */
+    header nav, #hamburger, header label {
+        display: none;
+    }
+
+    header {
+        background: none;
+        box-shadow: none;
+    }
+
+    main > nav {
+        display: block;
+    }
+
+    vue > nav button {
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+
+}
