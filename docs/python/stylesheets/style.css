@@ -80,7 +80,7 @@ header > nav {
 }
 
 header input:checked ~ nav {
-    animation: hamburgerMenuSlide 0.2s ease-out 0s 1;
+    animation: hamburgerMenuSlide 0.1s ease-out 0s 1;
     animation-fill-mode: both;
     box-shadow: 15px 0 20px rgba(0, 0, 0, 0.3);
     display: unset;
