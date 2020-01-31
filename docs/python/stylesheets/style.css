@@ -38,18 +38,10 @@ header h2 {
 }
 
 /* Hamburger menu */
-header nav, #hamburger{
+#hamburger{
     display: none;
 }
 
-header nav {
-    position: fixed;
-    top: 10vh;
-    left: 0;
-    height: 100vh;
-    text-align: left;
-    padding: 5%;
-}
 
 /* Style for header h1 (main page title) */
 header > nav h1 > a {
@@ -66,10 +58,6 @@ header > nav a:hover {
     text-decoration: underline;
 }
 
-header input:checked ~ nav {
-    display: unset;
-}
-
 header > label {
     position: absolute;
     left: 0;
@@ -79,15 +67,40 @@ header > label {
 }
 
 header > nav {
+    display: none;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    height: 100vh;
+    text-align: left;
+    padding: 5vw;
     background: rgb(240, 240, 100);
-    max-width: 80vw;
+    width: 70vw;
     color: black;
-    box-shadow: 15px 0 20px rgba(0, 0, 0, 0.3);
 }
+
+header input:checked ~ nav {
+    animation: hamburgerMenuSlide 1s ease-in-out 0s 1;
+    animation-fill-mode: both;
+    box-shadow: 15px 0 20px rgba(0, 0, 0, 0.3);
+    display: unset;
+}
+
 
 header > nav > ul {
     margin-top: 1rem;
 }
+
+
+@keyframes hamburgerMenuSlide{
+    0%{
+        transform: translate(-80vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
 
 vue > nav {
     text-align: center;
@@ -342,7 +355,6 @@ main > section *::selection{
 h1, h2 {
     font-weight: 400;
 } 
-
 
 @media screen and (min-width: 1100px){
     /* Iframes */
