@@ -374,7 +374,7 @@ h1, h2 {
     } 
 
     /* Hamburger menu */
-    header nav, #hamburger, header label {
+    header button, #hamburger, header label, header > nav > h1 {
         display: none;
     }
 
@@ -382,16 +382,63 @@ h1, h2 {
         background: none;
         box-shadow: none;
         position: relative;
-        margin-top: 10vh;
+        
         height: fit-content;
     }
 
+    header > nav {
+        display: block;
+        background: none;
+        position: unset;
+        height: 0;
+        padding: 0;
+    }
+
     header h1 {
+        margin-top: 10vh;
         font-size: 6vh;
     }
 
     header h2{
+        margin-bottom: 10vh;
         font-size: 4vh;
+    }
+
+    header > nav > ul > li {
+        position: absolute;
+        top: 0;
+        line-height: 1rem;
+        margin: 0.5rem;
+    }
+
+    header > nav > ul > li:nth-child(1){
+        left: 0;
+    }
+
+    header > nav > ul > li:nth-child(2){
+        right: 0;
+    }
+
+    header > nav h1 {
+        margin-top: 0;
+    }
+
+    header > nav a {
+        color: rgb(195, 195, 250);
+    }
+
+    header > nav h1 > a {
+        color: white;
+    }
+
+    header > nav h1 > a:hover {
+        color: white;
+    }
+    
+    header > nav a:hover {
+        color: rgb(230, 230, 250);
+        cursor: pointer;
+        text-decoration: none;
     }
 
     main > nav {
