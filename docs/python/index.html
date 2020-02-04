@@ -9,27 +9,37 @@
         <title>Tutor - Learning Python</title>
     </head>
     <body>
-        <noscript>Please enable JavaScript in your browser.</noscript>
         <vue>
             <header>
-                <label for="hamburger">&#9776;</label>
-                <input type="checkbox" id="hamburger"/>
-                <nav>
-                    <ul>
-                        <li><h1><a href="https://tutor.duncy.nz">Tutor.Duncy.nz</a></h1></li>
-                        <li><a href="https://github.com/alt1f923/tutor">Report typos</a></li>
-                    </ul>
-                    <h1>Table of Contents</h1>
-                    <ul>
-                        <topic-nav
-                            v-for="item in topicNav"
-                            :item="item"
-                            :key="item.id">
-                    </topic-nav>
-                    </ul>
-                </nav>        
+                <span id="hamburger" @click="show = !show">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </span>
+                <transition name="slide">
+                    <nav v-if="show">
+                        <ul>
+                            <li><h1><a href="https://tutor.duncy.nz">Tutor.Duncy.nz</a></h1></li>
+                        </ul>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a href="https://github.com/alt1f923/tutor">Report typos</a></li>
+                        </ul>
+                        <div class="line"></div>
+                        <h1>Table of Contents</h1>
+                        <ul>
+                            <topic-nav
+                                v-for="item in topicNav"
+                                :item="item"
+                                :key="item.id">
+                        </topic-nav>
+                        </ul>
+                        <div class="line"></div>
+                    </nav>
+                </transition>   
                 <h1>Learning Python</h1>
                 <h2>{{ title }}</h2>
+                <noscript>Please enable JavaScript in your browser.</noscript>
             </header>
             <next-previous-buttons></next-previous-buttons>
             <main class="flex-container">       
@@ -61,7 +71,7 @@
                 <li><a href="https://discordapp.com">Дункан#5963</a></li>
             </ul>
         </footer>
-        <script src="../scripts/vue.min.js"></script>
+        <script src="../scripts/vue/dist/vue.common.dev.js"></script>
         <script src="../scripts/vuex.min.js"></script>
         <script src="scripts/main.js"></script>
     </body>
