@@ -1,5 +1,5 @@
 /* Import OpenSans with weight of 800 for header */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
+@import url('https://fonts.googleapis.com/css?family=Poppins:800');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 
 * {
@@ -34,13 +34,13 @@ header h1 {
     font-size: 3vh;
 }
 
-header h2 {
+header h2, noscript {
     font-size: 2vh;
 }
 
 /* Style for header h1 (main page title) */
 header > nav h1 > a {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 800;
     font-size: 2rem;
 }
@@ -348,6 +348,16 @@ section span {
     width: 90%;
 }
 
+/* Colour text selection */
+*::selection {
+    visibility: hidden;
+}
+
+main > section *::selection{
+    background: rgb(100, 100, 100);
+    color: white;
+}
+
 /* Style for hyperlinked text */
 a {
     text-decoration: none;
@@ -374,15 +384,7 @@ section a::selection {
     color: rgb(200, 220, 255);
 }
 
-/* Colour text selection */
-*::selection {
-    visibility: hidden;
-}
 
-main > section *::selection{
-    background: rgb(100, 100, 100);
-    color: white;
-}
 
 /* Headings */
 h1, h2 {
