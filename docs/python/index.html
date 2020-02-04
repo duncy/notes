@@ -11,13 +11,9 @@
     <body>
         <vue>
             <header>
-                <span id="hamburger" @click="show = !show">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </span>
+                <hamburger-icon></hamburger-icon>
                 <transition name="slide">
-                    <nav v-show="show">
+                    <nav v-show="showHamburger">
                         <ul>
                             <li><h1><a href="https://tutor.duncy.nz">Tutor.Duncy.nz</a></h1></li>
                         </ul>
