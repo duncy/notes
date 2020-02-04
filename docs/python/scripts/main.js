@@ -1,6 +1,7 @@
 const store = new Vuex.Store({
     state: {
         currentID: 0,
+        showHamburger: false,
         sectionList: [
             {id: 0, title: 'Getting Started', content: [
                 {title: "Installation", columns: false, content: [{
@@ -128,6 +129,9 @@ const store = new Vuex.Store({
         },
         last(state) {
             state.currentID = state.sectionList.length - 1 
+        },
+        toggleHamburger(state) {
+            state.showHamburger = !state.showHamburger
         }
     }
 });
@@ -168,7 +172,6 @@ Vue.component('next-previous-buttons', {
     }
 })
 
-
 Vue.component('topic-nav', {
     props: ['item'],
     template: '<li><button @click="navButtonClick(item.id)">{{ item.text }}</button></li>',
@@ -184,12 +187,17 @@ Vue.component('sections', {
     template: '<section class="flex-box"><h1 v-html="item.title"></h1><div class="flex-container" :class="{ columns : item.columns }"><div class="flex-box" v-for="contentItem in item.content" :key="contentItem.id" v-html="contentItem.text"></div></div></section>'
 })
 
+Vue.component('hamburger-icon', {
+    template: '<span id="hamburger" @click="toggleHamburger"><div></div><div></div><div></div></span>',
+    methods: {
+        toggleHamburger() {
+            store.commit("toggleHamburger")
+        }
+    }
+})
 
 var site = new Vue({
     el: 'vue',
-    data: {
-        show: false
-    },
     computed: {
         title() {
             return store.state.sectionList[store.state.currentID].title
@@ -199,6 +207,9 @@ var site = new Vue({
         },
         sections() {
             return store.state.sectionList[store.state.currentID].content
+        },
+        showHamburger() {
+            return store.state.showHamburger
         }
     }
 })
