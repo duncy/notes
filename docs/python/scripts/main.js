@@ -57,13 +57,56 @@ const store = new Vuex.Store({
                     id: 1,
                     text: "<p>You can use any letter or an underscore as the first character of a variable name, and for any character after that can be any letter, number or an underscore.</p><p>Now before you go and start naming variables willy-nilly. There are commonly accepted conventions for how you should name things, as I introduce new concepts I'll say what their naming convention is, but as for what we have covered so far by <a href='https://www.python.org/dev/peps/pep-0008/'>PEP 8</a>:</p><ul><li>Variable names should be completely lowercase with words separated by an underscore</li><li>Globals (Variables that can be accessed from anywhere in the code and can be changed) should follow the same convention as variables</li><li>Constants (Variables that you can access for later, and which shouldn't be changed e.g. <code>PI = 3.14</code>) should be completely uppercase with words separated by an underscore</li></ul><p>I wouldn't worry too much about globals or constants, as you probably won't be needing to use them for a while.</p><p><b>If you use a linter one of the things that it will check is if you follow naming conventions.</b></p>"
                 }]}
+            ]},
+            {id: 4, title: 'Conditionals', content: [
+                {title: "Introduction", columns: false, content: [{
+                    id: 0,
+                    text: "<p>What if we wanted to do different things to <code>x</code> based on what <code>x</code> is?<br>Well, we can, we can use an <code>if</code> statement.</p><p>Usage in Python looks like this:</p><span>if condition:<br>&#09;do stuff</span><p><code>condition</code> in this case is a conditional, some examples being:</p><span>>>>x = 0<br>>>>x<br>0<br>>>>x == 0 # x is equal to 0<br>True<br>>>>x > 0 # x is greater than 0<br>False<br>>>>x <= 0: # x is less than or equal to 0<br>True<br>>>>x != 0: # x is not equal to 0<br>False</span>"
+                }]},
+                {title: "Booleans and equivalences", columns: false, content: [{
+                    id: 0,
+                    text: "<p>As you can see, these conditionals return True or False, this is because they are booleans. Equivalents to these will also work as conditions. If x is 1 then x will be equivalent to True meaning instead of having to write:</p><span>if x == 1:</span><p>you can write</p><span>if x: # this is shorthand for if x is True</span><p>The opposite goes for <code>False</code></p><span>if x == 0:</span><p>to get this, we have to <b>negate</b> (invert) the previous statement, we do this by using <code>not</code></p><span>if not x:</span>"
+                }]},
+                {title: "Using the <code>and</code> and <code>or</code> keywords", columns: false, content: [{
+                    id: 0,
+                    text: "<p>If you want to have multiple conditions where they both have to be <code>True</code> you can do this</p><span>if condition1 and condition2:<br><pre>    do stuff</pre></span><p>if you want to have multiple conditions where only one has to be <code>True</code> you can do this</p><span>if condition1 or condition2:<br><pre>    do stuff</pre></span><p>it's very important that you make sure that your conditional is written correctly, sometimes you will need to use parenthesis</p><span>>>> False and True or True # False and True have to be the same so they're False, making the statement False or True, so this is True<br>True<br>>>> False and (True or True) # False and (True or True) becomes False and True, which is False<br>False<br>>>> (False and True) or True # False and True make False, making the statement False or True, so this is true<br>True<br>>>> not False and True or True # not False, which is True makes the statement True and True or True, which is going to be True<br>True<br>>>> not (False and True or True) # this is a negation of the first conditional, so it is False<br>False</span><p>don't forget, even these statements using <code>or</code> and <code>and</code> are conditionals too.</p>"
+                }]},
+                {title: "<code>if</code> statements", columns: false, content: [{
+                    id: 0,
+                    text: "You can use these conditionals inside <code>if</code> statements (and loops, which I'll explain in the future!) but it's time to explain how <code>if</code> statements work in Python, there are:<ul><li><code>if</code> statements, these are the first part of the your <code>if</code> statement</li><li><code>elif</code> statements, these are the same as <code>if</code> statements, but they are checked after the statement above them if it isn't <code>True</code></li><li><code>else</code> statements, these do not have any conditions, but you can use them to catch if your <code>if</code>s and <code>elif</code>s turn up <code>False</code></li></ul><p>Let's see some examples of them:</p><span>if False: # Because this conditional is False, the code inside it will not run, instead it will check the next part of the if statement, the elif statement<br><pre>    do stuff</pre><br>elif False: # This conditional is also False, so the program will move onto the next statement<br><pre>    do stuff</pre><br>elif True: # Because this conditional is True, the code inside it will be run<br><pre>    do stuff</pre><br>else: # Because the statement before it was True, the code inside the else statement will not be run because the if statement ended at the second elif<br><pre>    do stuff</pre></span><p><b>From this point on I will be using \"Script mode\", meaning I'll have a Python file open and running that instead of typing line by line into the shell. Unless I'm not and I say so.</b></p>"
+                }]}
             ]}
+            // {id: 5, title: 'Functions', content: [
+            //     {title: "Introduction", columns: false, content: [{
+            //         id: 0,
+            //         text: " "
+            //     },
+            //     {
+            //         id: 1,
+            //         text: " "
+            //     }]}
+
+            // ]},
+            // {id: 5, title: 'Docstrings & Functions', content: [
+            //     {title: "Introduction", columns: false, content: [{
+            //         id: 0,
+            //         text: " "
+            //     },
+            //     {
+            //         id: 1,
+            //         text: " "
+            //     }]}
+
+            // ]}
         ],
         navList: [
         { id: 0, text: '1.1 - Getting Started'},
         { id: 1, text: '1.2 - What is Python?'},
         { id: 2, text: '1.3 - Expressions'},
-        { id: 3, text: '1.4 - Variables'}
+        { id: 3, text: '1.4 - Variables'},
+        { id: 4, text: '1.5 - Conditionals'}
+        // { id: 5, text: '1.6 - Functions'},
+        // { id: 6, text: '1.7 - Docstrings & Formatting'}
         ]
     },
     mutations: {
@@ -138,11 +181,15 @@ Vue.component('topic-nav', {
 
 Vue.component('sections', {
     props: ['item'],
-    template: '<section class="flex-box"><h1>{{ item.title }}</h1><div class="flex-container" :class="{ columns : item.columns }"><div class="flex-box" v-for="contentItem in item.content" :key="contentItem.id" v-html="contentItem.text"></div></div></section>'
+    template: '<section class="flex-box"><h1 v-html="item.title"></h1><div class="flex-container" :class="{ columns : item.columns }"><div class="flex-box" v-for="contentItem in item.content" :key="contentItem.id" v-html="contentItem.text"></div></div></section>'
 })
+
 
 var site = new Vue({
     el: 'vue',
+    data: {
+        show: false
+    },
     computed: {
         title() {
             return store.state.sectionList[store.state.currentID].title
