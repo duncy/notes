@@ -55,15 +55,6 @@ header > nav a:hover {
     text-decoration: underline;
 }
 
-#hamburger {
-    position: absolute;
-    left: 5%;
-    top: 1vh;
-    font-size: 5vh;
-    height: 10vh;
-    width: 6vh;
-}
-
 header > nav {
     position: fixed;
     top: 10vh;
@@ -93,6 +84,8 @@ header > nav > ul:nth-child(6) > li {
     padding: 0.5rem;
 }
 
+/* Dividing line for hamburger */
+
 .line {
     width: 80vw;
     height: 2px;
@@ -100,31 +93,66 @@ header > nav > ul:nth-child(6) > li {
     margin-top: 1rem;
 }
 
-#hamburger > div {
+/* Hamburger icon */
+
+#hamburger {
     position: fixed;
-    margin-top: 1.5vh;
+    left: 5%;
+    top: 2vh;
+    height: 5.5vh;
+    width: 6vh;
+    transition: transform 0.05s cubic-bezier(1,.87,0,1.32);
+}
+
+/* Hamburger icon active */
+
+#hamburger.active {
+    transform: translateX(-2.5vh);
+}
+
+/* Hamburger icon lines */
+
+.hamburger-line {
     background: white;
-    height: 5px;
-    width: 5vh;
+    height: 1vh;
+    width: 6vh;
+    margin-bottom: 1.5vh;
 }
 
-#hamburger > div:nth-of-type(1) {
-    top: 1vh;
+.hamburger-line:nth-of-type(1), .hamburger-line:nth-of-type(3) {
+    transition: transform 0.5s cubic-bezier(1,.87,0,1.32);
 }
 
-#hamburger > div:nth-of-type(2) {
-    top: 3vh;
+.hamburger-line:nth-of-type(2) {
+    transition: opacity 0.5s cubic-bezier(1,.87,0,1.32);
 }
 
-#hamburger > div:nth-of-type(3) {
-    top: 5vh;
+/* Hamburger active icon lines */
+
+#hamburger.active > .hamburger-line:nth-of-type(1) {
+    transform: rotate(45deg) translate(3.5vh);
 }
+
+#hamburger.active > .hamburger-line:nth-of-type(2) {
+    opacity: 0;
+    transition: opacity 0.05s cubic-bezier(1,.87,0,1.32);
+}
+
+#hamburger.active > .hamburger-line:nth-of-type(3) {
+    transform: rotate(-45deg) translate(3.5vh);
+}
+
+#hamburger.active > .hamburger-line:nth-of-type(3), #hamburger.active > .hamburger-line:nth-of-type(1), #hamburger.active {
+    transition: transform 0.5s cubic-bezier(1,.87,0,1.32);
+}
+
+/* Nav Vue transition */
 
 nav.slide-enter-active {
     transition: all .3s ease;
 }
 nav.slide-leave-active {
-    transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    transition: all .3s cubic-bezier(1,.17,0,1.32);
 }
 nav.slide-enter, nav.slide-leave-to {
     transform: translateX(-80vw);
