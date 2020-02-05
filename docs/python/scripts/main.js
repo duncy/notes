@@ -187,11 +187,16 @@ Vue.component('sections', {
     template: '<section class="flex-box"><h1 v-html="item.title"></h1><div class="flex-container" :class="{ columns : item.columns }"><div class="flex-box" v-for="contentItem in item.content" :key="contentItem.id" v-html="contentItem.text"></div></div></section>'
 })
 
-Vue.component('hamburger-icon', {
-    template: '<span id="hamburger" @click="toggleHamburger"><div></div><div></div><div></div></span>',
+Vue.component('hamburger-button', {
+    template: '<button id="hamburger" :class="{ active : showHamburger }" @click="toggleHamburger"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>',
     methods: {
         toggleHamburger() {
             store.commit("toggleHamburger")
+        }
+    },
+    computed: {
+        showHamburger() {
+            return store.state.showHamburger
         }
     }
 })
