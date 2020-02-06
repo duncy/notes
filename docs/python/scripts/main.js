@@ -76,16 +76,17 @@ const store = new Vuex.Store({
                     id: 0,
                     text: "You can use these conditionals inside <code>if</code> statements (and loops, which I'll explain in the future!) but it's time to explain how <code>if</code> statements work in Python, there are:<ul><li><code>if</code> statements, these are the first part of the your <code>if</code> statement</li><li><code>elif</code> statements, these are the same as <code>if</code> statements, but they are checked after the statement above them if it isn't <code>True</code></li><li><code>else</code> statements, these do not have any conditions, but you can use them to catch if your <code>if</code>s and <code>elif</code>s turn up <code>False</code></li></ul><p>Let's see some examples of them:</p><span>if False: # Because this conditional is False, the code inside it will not run, instead it will check the next part of the if statement, the elif statement<br><pre>    do stuff</pre><br>elif False: # This conditional is also False, so the program will move onto the next statement<br><pre>    do stuff</pre><br>elif True: # Because this conditional is True, the code inside it will be run<br><pre>    do stuff</pre><br>else: # Because the statement before it was True, the code inside the else statement will not be run because the if statement ended at the second elif<br><pre>    do stuff</pre></span><p><b>From this point on I will be using \"Script mode\", meaning I'll have a Python file open and running that instead of typing line by line into the shell. Unless I'm not and I say so.</b></p>"
                 }]}
+            ]},
+            {id: 5, title: 'Functions', content: [
+                {title: "Defining and returning", columns: false, content: [{
+                    id: 0,
+                    text: "<p>What if you could do the same piece of code to different variables, <b>without</b> having to write the code multiple times? That's what a function is, it allows you to set special variables only it can use inside itself, where you can give it instructions on what you want it to do with it, you can have it <code>return</code> values back or just do an action.</p><p><b>Functions follow the same naming convention as variables (lowercase with words separated by underscores)</b></p><p>To define a function, we use the <code>def</code> keyword followed by what we want to name the function, ending the line with parenthesis with what variables we want to use inside them. With a colon as the last character.</p><p>Let's look at an example:</p><span>def function(x, y):<br><pre>    z = x + y</pre><br><pre>    z *= y</pre><br><pre>    return z</pre></span><p>This will return the product of <code>y(x + y)</code>, if <code>x</code> was <code>2</code> and <code>y</code> was <code>3</code> then <code>function(3, 2)</code> would return <code>z</code> which would be equal to <code>10</code>.<br>You might be wondering why I don't write this instead:</p><span>def function(x, y):<pre>    x += y</pre><br><pre>    x *= y</pre><br><pre>    return x</pre></span><p>it will do the same thing, however, this is bad practice, as in the future some different types of variables can be edited from inside a function this way.</p><p>You can however compact this code down to one line, and you should try to make sure your code takes up as least amount of lines as possible, just be sure to keep it readable, PEP 8 recommends a maximum line length of 79 characters (72 for comments and docstrings, which I'll bring up soon), this is what lints and formatters will try to enforce, it's good habit to keep your code succinct. like so:</p><span>def function(x, y):<pre>    return (x + y) * y</pre><br></span><p>It ends up looking a little more complicated, but I'd recommend trying to do this where you can, just make sure you don't go overboard and create problems for yourself or others later down the line by making it hard to understand. Try to find a good balance.</p>"
+                }]},
+                {title: "Calling a function", columns: false, content: [{
+                    id: 0,
+                    text: "<p>Returning is all well and good, but it's useless if we're not returning into something. So when we call the function, instead of just writing <code>function(2, 3)</code> we can write <code>z = function(2, 3)</code>, this way we can use the value that is returned later, as a variable.</p><p>You can also call functions from inside themselves as well as being able to call and define functions from inside other functions. Examples being:</p><span>def function1():<pre>    function1() # This will go on forever, in theory. This is called recursion and it is a very powerful tool</pre><br><br>def function2():<pre>    function1()</pre><br><br>def function3():<pre>    def function4():</pre><pre>        pass</pre><br><br>def function5():<pre>    function4() # You cannot do this, as function4 was defined inside function 3 and can only be used inside it</pre></span><p>Functions don't have to return something, they can just print something instead of returning it, or they can save something to a file, it's up to you.</p><p><b>Remember: Python can do anything and so can you.</b></p>"
+                }]}
             ]}
-            // {id: 5, title: 'Functions', content: [
-            //     {title: "Introduction", columns: false, content: [{
-            //         id: 0,
-            //         text: " "
-            //     },
-            //     {
-            //         id: 1,
-            //         text: " "
-            //     }]}
 
             // ]},
             // {id: 5, title: 'Docstrings & Functions', content: [
@@ -105,8 +106,8 @@ const store = new Vuex.Store({
         { id: 1, text: '1.2 - What is Python?'},
         { id: 2, text: '1.3 - Expressions'},
         { id: 3, text: '1.4 - Variables'},
-        { id: 4, text: '1.5 - Conditionals'}
-        // { id: 5, text: '1.6 - Functions'},
+        { id: 4, text: '1.5 - Conditionals'},
+        { id: 5, text: '1.6 - Functions'}
         // { id: 6, text: '1.7 - Docstrings & Formatting'}
         ]
     },
