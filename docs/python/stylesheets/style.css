@@ -11,11 +11,16 @@ html {
     background-color: rgb(50, 50, 50);
     font-family: 'Source Sans Pro', sans-serif;
     color: rgb(230, 230, 230);
-    font-size: 2vh;
 }
 
 body {
     margin: 0.25vw;
+    font-size: 16px;
+    line-height: 120%;
+}
+
+ul {
+    line-height: 200%;
 }
 
 header {
@@ -30,24 +35,24 @@ header {
 }
 
 header h1 {
-    margin-top: 2vh;
-    font-size: 3vh;
+    margin-top: 2.25vh;
+    font-size: 130%;
 }
 
 header h2, noscript {
-    font-size: 2vh;
+    font-size: 90%;
 }
 
 /* Style for header h1 (main page title) */
 header > nav h1 > a {
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 125%;
 }
 
 header > nav a {
     color: black;
-    font-size: 1.5rem;
+    font-size: 130%;
 }
 
 header > nav a:hover {
@@ -76,7 +81,7 @@ header > nav > ul {
     margin-top: 1rem;
     margin-left: 5vw;
     margin-right: 5vw;
-    font-size: 1.25rem;
+    font-size: 105%;
 }
 
 header > nav > ul:nth-child(6) > li {
@@ -162,7 +167,6 @@ nav.slide-enter, nav.slide-leave-to {
 vue > nav {
     text-align: center;
     padding: .5rem;
-    font-size: 1.2rem;
 }
 
 vue > nav:first-of-type {
@@ -182,6 +186,7 @@ main > nav {
     background: rgb(240, 240, 100);
     max-width: 15vw;
     margin-right: 0.25vw;
+    font-size: 110%;
 }
 
 main > nav > h1 {
@@ -196,7 +201,7 @@ main > nav > ul {
 
 main > section > section{
     background: rgb(240, 240, 240);
-    font-size: 1rem;
+    font-size: 100%;
     padding-bottom: 2rem;
 }
 
@@ -208,7 +213,7 @@ main > section > section > h1 {
     padding-left: 2.5vw;
     padding-right: 2.5vw;
     padding-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 150%;
 }
 
 main > section > section > div {
@@ -222,7 +227,7 @@ main > section > section > div > div {
 }
 
 main > section > section > div > div > h1 {
-    font-size: 1.3rem;
+    font-size: 130%;
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
@@ -244,7 +249,7 @@ main > section > section > div > div > ul > li {
 /* Style for footer */
 footer {
     text-align: center;
-    font-size: 1rem;
+    font-size: 100%;
     flex-shrink: 0;
     color: rgb(150, 150, 150);
     padding-top: 3rem;
@@ -289,7 +294,7 @@ button {
 
 vue > nav > button {
     display: inline;
-    font-size: 2rem;
+    font-size: 200%;
     color: white;
     margin: 1rem;
 }
@@ -354,26 +359,50 @@ iframe {
 }
 
 /* Style for code blocks */
-section > section > code, section span {
-    font-size: 1rem;
+code, section span {
+    font-size: 101%;
 }
 
-
 code {
-    background: rgb(220, 220, 220);
+    background: rgb(230, 230, 225);
     padding-left: 0.25rem;
     padding-right: 0.25rem;
+    font-family: monospace;
 }
 
 section span {
-    background:  rgb(40, 40, 40);
-    border: 2px solid rgb(190, 190, 190);
+    background:  rgb(230, 230, 225);
     border-radius: 0.5rem;
     padding: 1rem;
-    color: rgb(190, 190, 190);
     font-family: monospace;
     overflow: auto;
+    max-width: 85vw;
     width: 90%;
+}
+
+section span > span {
+    display: inline;
+    padding: 0;
+}
+
+.comment {
+    color: rgb(100, 150, 100);
+}
+
+.keyword {
+    color: rgb(150, 100, 100);
+}
+
+.operator {
+    color: rgb(100, 100, 50);
+}
+
+.method {
+    color: rgb(150, 100, 150);
+}
+
+.string {
+    color: rgb(180, 120, 50);
 }
 
 /* Colour text selection */
@@ -413,7 +442,6 @@ section a::selection {
 }
 
 
-
 /* Headings */
 h1, h2 {
     font-weight: 400;
@@ -445,18 +473,18 @@ h1, h2 {
         background: none;
         box-shadow: none;
         position: relative;
-        
         height: fit-content;
     }
 
     header h1 {
         margin-top: 10vh;
-        font-size: 6vh;
+        font-size: 450%;
+        line-height: 150%;
     }
 
     header h2{
         margin-bottom: 20vh;
-        font-size: 4vh;
+        font-size: 250%;
     }
 
     main > nav {
@@ -464,7 +492,7 @@ h1, h2 {
     }
 
     vue > nav button {
-        font-size: 1rem;
+        font-size: 125%;
         margin: 0.5rem;
     }
 
