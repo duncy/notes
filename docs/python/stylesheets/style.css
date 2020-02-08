@@ -164,12 +164,12 @@ nav.slide-enter, nav.slide-leave-to {
     opacity: 0;
 }
 
-vue > nav {
+#vue > nav {
     text-align: center;
     padding: .5rem;
 }
 
-vue > nav:first-of-type {
+#vue > nav:first-of-type {
     margin-top: 15vh;
 }
 
@@ -292,7 +292,7 @@ button {
     background: none;
 }
 
-vue > nav > button {
+#vue > nav > button {
     display: inline;
     font-size: 200%;
     color: white;
@@ -491,12 +491,12 @@ h1, h2 {
         display: block;
     }
 
-    vue > nav button {
+    #vue > nav button {
         font-size: 125%;
         margin: 0.5rem;
     }
 
-    vue > nav:first-of-type {
+    #vue > nav:first-of-type {
         display: none;
     }
 
