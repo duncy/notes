@@ -197,9 +197,14 @@ main > nav > h1 {
     padding: 1vw;
 }
 
-main > nav > ul {
+.category > ul {
     list-style-type: none;
     padding: 1vw;
+}
+
+.category > ul > h1 {
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 main > section > section{
@@ -293,6 +298,7 @@ button {
     border: none;
     font-size: inherit;
     background: none;
+    text-align: left;
 }
 
 #vue > nav > button {
