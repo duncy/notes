@@ -23,13 +23,7 @@
                         </ul>
                         <div class="line"></div>
                         <h1>Table of Contents</h1>
-                        <ul>
-                            <topic-nav
-                                v-for="item in topicNav"
-                                :item="item"
-                                :key="item.id">
-                            </topic-nav>
-                        </ul>
+                        <topic-nav></topic-nav>
                         <div class="line"></div>
                     </nav>
                 </transition>   
@@ -41,13 +35,7 @@
             <main class="flex-container">       
                 <nav class="flex-box">
                     <h1>Table of Contents</h1>
-                    <ul>
-                    <topic-nav
-                        v-for="item in topicNav"
-                        :item="item"
-                        :key="item.id">
-                    </topic-nav>
-                    </ul>
+                    <topic-nav></topic-nav>
                 </nav>
                 <section class="flex-container flex-box columns">
                     <sections
