@@ -15,12 +15,11 @@ html {
 
 body {
     margin: 0.25vw;
-    font-size: 16px;
-    line-height: 120%;
+    line-height: 1.2rem;
 }
 
 ul {
-    line-height: 200%;
+    line-height: 1.5rem;
 }
 
 header {
@@ -28,7 +27,7 @@ header {
     top: 0;
     left: 0;
     height: 10vh;
-    width: 100%;
+    width: 100vw;
     background: rgb(100, 100, 230);
     text-align: center;
     overflow: hidden;
@@ -36,23 +35,23 @@ header {
 
 header h1 {
     margin-top: 2.25vh;
-    font-size: 130%;
+    font-size: 1.35rem;
 }
 
 header h2, noscript {
-    font-size: 90%;
+    font-size: 0.9rem;
 }
 
 /* Style for header h1 (main page title) */
 header > nav h1 > a {
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
-    font-size: 125%;
+    font-size: 1.5rem;
 }
 
 header > nav a {
     color: black;
-    font-size: 130%;
+    font-size: 1.25rem;
 }
 
 header > nav a:hover {
@@ -67,7 +66,7 @@ header > nav {
     height: 100vh;
     text-align: left;
     background: rgb(240, 240, 100);
-    width: 80vw;
+    width: fit-content;
     color: black;
     box-shadow: 15px 0 20px rgba(0, 0, 0, 0.3);
 }
@@ -81,7 +80,7 @@ header > nav > ul {
     margin-top: 1rem;
     margin-left: 5vw;
     margin-right: 5vw;
-    font-size: 105%;
+    font-size: 1rem;
 }
 
 header > nav > ul:nth-child(6) > li {
@@ -102,7 +101,7 @@ header > nav > ul:nth-child(6) > li {
 
 #hamburger {
     position: fixed;
-    left: 5%;
+    left: 2vh;
     top: 2vh;
     height: 5.5vh;
     width: 6vh;
@@ -186,7 +185,7 @@ main > nav {
     background: rgb(240, 240, 100);
     max-width: 15vw;
     margin-right: 0.25vw;
-    font-size: 110%;
+    font-size: 1.1rem;
 }
 
 main > nav > h1 {
@@ -201,7 +200,7 @@ main > nav > ul {
 
 main > section > section{
     background: rgb(240, 240, 240);
-    font-size: 100%;
+    font-size: 1rem;
     padding-bottom: 2rem;
 }
 
@@ -212,8 +211,8 @@ main > section > section:not(:first-child){
 main > section > section > h1 {
     padding-left: 2.5vw;
     padding-right: 2.5vw;
-    padding-top: 1rem;
-    font-size: 150%;
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
 }
 
 main > section > section > div {
@@ -227,7 +226,7 @@ main > section > section > div > div {
 }
 
 main > section > section > div > div > h1 {
-    font-size: 130%;
+    font-size: 1.35rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
@@ -249,7 +248,7 @@ main > section > section > div > div > ul > li {
 /* Style for footer */
 footer {
     text-align: center;
-    font-size: 100%;
+    font-size: 1rem;
     flex-shrink: 0;
     color: rgb(150, 150, 150);
     padding-top: 3rem;
@@ -294,7 +293,7 @@ button {
 
 #vue > nav > button {
     display: inline;
-    font-size: 200%;
+    font-size: 2rem;
     color: white;
     margin: 1rem;
 }
@@ -314,7 +313,7 @@ button:focus {
 
 button:disabled {
     text-decoration: none;
-    color: gray;
+    color: gray !important;
 }
 
 button:disabled:hover {
@@ -359,10 +358,6 @@ iframe {
 }
 
 /* Style for code blocks */
-code, section span {
-    font-size: 101%;
-}
-
 code {
     background: rgb(230, 230, 225);
     padding-left: 0.25rem;
@@ -370,39 +365,36 @@ code {
     font-family: monospace;
 }
 
-section span {
+.code-block {
     background:  rgb(230, 230, 225);
     border-radius: 0.5rem;
     padding: 1rem;
     font-family: monospace;
     overflow: auto;
+    word-wrap: normal;
     max-width: 85vw;
     width: 90%;
 }
 
-section span > span {
+.code-block > span {
     display: inline;
     padding: 0;
 }
 
 .comment {
-    color: rgb(100, 150, 100);
+    color: rgb(75, 145, 70);
 }
 
 .keyword {
-    color: rgb(150, 100, 100);
+    color: rgb(215, 60, 75);
 }
 
 .operator {
-    color: rgb(100, 100, 50);
+    color: rgb(0, 95, 200);
 }
 
 .method {
-    color: rgb(150, 100, 150);
-}
-
-.string {
-    color: rgb(180, 120, 50);
+    color: rgb(115, 65, 195);
 }
 
 /* Colour text selection */
@@ -478,13 +470,13 @@ h1, h2 {
 
     header h1 {
         margin-top: 10vh;
-        font-size: 450%;
-        line-height: 150%;
+        font-size: 4.5rem;
+        line-height: 6rem;
     }
 
     header h2{
         margin-bottom: 20vh;
-        font-size: 250%;
+        font-size: 2.5rem;
     }
 
     main > nav {
@@ -492,7 +484,7 @@ h1, h2 {
     }
 
     #vue > nav button {
-        font-size: 125%;
+        font-size: 1.25rem;
         margin: 0.5rem;
     }
 
