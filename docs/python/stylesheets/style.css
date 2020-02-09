@@ -26,7 +26,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    height: 10vh;
+    height: 5rem;
     width: 100vw;
     background: rgb(100, 100, 230);
     text-align: center;
@@ -34,13 +34,13 @@ header {
 }
 
 header h1 {
-    margin-top: 2.25vh;
-    font-size: 3.5vh;
-    line-height: 3.5vh;
+    margin-top: 1rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
 }
 
 header h2, noscript {
-    font-size: 2vh;
+    font-size: 1rem;
 }
 
 /* Style for header h1 (main page title) */
@@ -62,9 +62,9 @@ header > nav a:hover {
 
 header > nav {
     position: fixed;
-    top: 10vh;
+    top: 5rem;
     left: 0;
-    height: 90vh;
+    height: calc(100vh - 5rem);
     text-align: left;
     background: rgb(240, 240, 100);
     width: -webkit-fit-content;
@@ -105,26 +105,26 @@ header > nav > ul:nth-child(6) > li {
 
 #hamburger {
     position: fixed;
-    left: 2vh;
-    top: 2vh;
-    height: 5.5vh;
-    width: 6vh;
+    left: 1rem;
+    top: 1rem;
+    height: 3rem;
+    width: 3rem;
     transition: transform 0.05s cubic-bezier(1,.87,0,1.32);
 }
 
 /* Hamburger icon active */
 
 #hamburger.active {
-    transform: translateX(-2.5vh);
+    transform: translateX(-1.35rem);
 }
 
 /* Hamburger icon lines */
 
 .hamburger-line {
     background: white;
-    height: 1vh;
-    width: 6vh;
-    margin-bottom: 1.5vh;
+    height: 0.5rem;
+    width: 3rem;
+    margin-bottom: 0.75rem;
 }
 
 .hamburger-line:nth-of-type(1), .hamburger-line:nth-of-type(3) {
@@ -138,7 +138,7 @@ header > nav > ul:nth-child(6) > li {
 /* Hamburger active icon lines */
 
 #hamburger.active > .hamburger-line:nth-of-type(1) {
-    transform: rotate(45deg) translate(3.5vh);
+    transform: rotate(45deg) translate(1.8rem);
 }
 
 #hamburger.active > .hamburger-line:nth-of-type(2) {
@@ -147,7 +147,7 @@ header > nav > ul:nth-child(6) > li {
 }
 
 #hamburger.active > .hamburger-line:nth-of-type(3) {
-    transform: rotate(-45deg) translate(3.5vh);
+    transform: rotate(-45deg) translate(1.8rem);
 }
 
 #hamburger.active > .hamburger-line:nth-of-type(3), #hamburger.active > .hamburger-line:nth-of-type(1), #hamburger.active {
