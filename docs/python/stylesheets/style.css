@@ -376,7 +376,7 @@ code {
     font-family: monospace;
     overflow: auto;
     word-wrap: normal;
-    max-width: 89.5vw;
+    max-width: 85vw;
 }
 
 .code-block > span {
