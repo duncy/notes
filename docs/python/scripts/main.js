@@ -117,7 +117,7 @@ const store = new Vuex.Store({
             {id: 7, title: 'Types', content: [
                 {title: "Types we know so far", columns: true, content: [{
                     id:0,
-                    text: "<p>Types are an important part of Python, but the language itself generally does most of the work for you. Types are classifications of values. Some examples that we have used and seen so far are:</p>"
+                    text: "<p>Types are an important part of Python, but the language itself generally does most of the work for you. However, it wouldn't hurt to know about them in better detail.</p><p>Types are classifications of values. Some examples that we have used and seen so far are:</p>"
                 },
                 {
                     id: 1,
