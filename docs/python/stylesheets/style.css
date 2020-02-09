@@ -26,7 +26,8 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    height: 10vh;
+    min-height: 10vh;
+    height: max-content;
     width: 100vw;
     background: rgb(100, 100, 230);
     text-align: center;
@@ -66,6 +67,8 @@ header > nav {
     height: 90vh;
     text-align: left;
     background: rgb(240, 240, 100);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     color: black;
     box-shadow: 15px 0 20px rgba(0, 0, 0, 0.3);
@@ -466,6 +469,8 @@ h1, h2 {
         background: none;
         box-shadow: none;
         position: relative;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
 
