@@ -95,7 +95,7 @@ header > nav > ul:nth-child(6) > li {
 /* Dividing line for hamburger */
 
 .line {
-    width: 80vw;
+    width: 100%;
     height: 2px;
     background-color: rgba(0, 0, 0, 0.1);
     margin-top: 1rem;
@@ -443,7 +443,6 @@ h1, h2 {
     font-weight: 400;
 } 
 
-@media screen and (min-height: px){
 
 @media screen and (min-width: 1100px){
     /* Iframes */
@@ -471,16 +470,18 @@ h1, h2 {
         background: none;
         box-shadow: none;
         position: relative;
+        height: fit-content;
+        width: 100%;
     }
 
     header h1 {
-        margin-top: 10vh;
+        margin-top: 7.5rem;
         font-size: 4.5rem;
         line-height: 6rem;
     }
 
     header h2{
-        margin-bottom: 20vh;
+        margin-bottom: 10rem;
         font-size: 2.5rem;
     }
 
