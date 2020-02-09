@@ -63,12 +63,13 @@ header > nav {
     position: fixed;
     top: 10vh;
     left: 0;
-    height: 100vh;
+    height: 90vh;
     text-align: left;
     background: rgb(240, 240, 100);
     width: fit-content;
     color: black;
     box-shadow: 15px 0 20px rgba(0, 0, 0, 0.3);
+    overflow: scroll;
 }
 
 header > nav > h1 {
