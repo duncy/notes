@@ -72,7 +72,7 @@ header > nav {
     width: fit-content;
     color: black;
     box-shadow: 15px 0 20px rgba(0, 0, 0, 0.3);
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 header > nav > h1 {
