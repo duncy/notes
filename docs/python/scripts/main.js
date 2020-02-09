@@ -6,7 +6,7 @@ const store = new Vuex.Store({
             {id: 0, title: 'Getting Started', content: [
                 {title: "Introduction", columns: false, content: [{
                     id: 0,
-                    text: "<p>Hello, my name is Duncan, and this is my little Python website on the internet. I hope the pages on here end up being helpful for you my dear reader.</p><p>This was initially a bunch of Markdown files written for a friend to help him to learn Python for one of his upcoming classes, but eventually more people expressed interest in the project so I decided to make it into an actual site that I can hopefully one day make into one of the best wealths of information for all things Python. If you have any suggestions, I'd be happy to hear them, my contacts are down in the footer below and I wish you well with your learning adventure. :]</p>"
+                    text: "<p>Hello, my name is Duncan, and this is my little Python website on the internet. I hope the pages on here end up being helpful for you, my dear reader.</p><p>This was initially a bunch of Markdown files written for a friend to help him to learn Python for one of his upcoming classes, but eventually more people expressed interest in the project so I decided to make it into an actual site that I can hopefully one day make into one of the best wealths of information for all things Python. If you have any suggestions, I'd be happy to hear them, my contacts are down in the footer below and I wish you well with your learning adventure. :]</p>"
 
                 }]},
                 {title: "Installation", columns: false, content: [{
