@@ -142,7 +142,7 @@ const store = new Vuex.Store({
                     text: "<p>Time for a shorter article, sorry for the length of them so far. :]</p><p><b>Everything</b> in Python is an <b>object</b>, int objects, float objects, str objects, function objects.<br>But what are objects? Well, objects are like these bags of functions.<br>Each <code>type</code>, <code>class</code> and <code>object</code> have functions that operate on them. These functions are called <b>methods</b>.</p><p>I will give some examples of methods for the <code>type</code> <code>str</code> in interactive mode:</p><pre class='code-block'><span class='operator'>>>></span> \"string\".<span class='method'>captialize</span>() <span class='comment'># Note that you can just use a string literal instead of a variable to use the method on. (I'll cover literals in a later article.)</span><br>'String'<br><span class='operator'>>>></span> \"STRING\".<span class='method'>lower</span>()<br>'string'<br><span class='operator'>>>></span> \"string\".<span class='method'>upper</span>()<br>'STRING'<br><span class='operator'>>>></span> \"ringstringstring\".<span class='method'>strip</span>(\"ring\") <br>'stringst' <span class='comment'># Note that it only removes the substring from the ends, and not from inside, this is especially useful for removing leading and trailing whitespace.</span><br><span class='operator'>>>></span> \"string\".<span class='method'>split</span>('i')<br>['str', 'ng'] <span class='comment'># This is a list type variable, don't worry, I'll be covering these in a future article!</span></pre><p>To find all the methods for objects you can use:</p><pre class='code-block'><span class='operator'>>>></span> <span class='method'>help</span>(object)</pre>"
                 }]}
             ]},
-            {id: 9, title: 'Running a Terraria Server with Python', content: [
+            {id: 9, title: 'Terraria Server Project', content: [
                 {title: "Coming soon :]", columns: false, content: []}
             ]}
             // {id: 0, title: '', content: [
@@ -165,7 +165,7 @@ const store = new Vuex.Store({
                 { id: 8, text: '1.9 - Objects & Methods'}
             ]},
             { id: 1, title: "My Python Adventures", content: [
-                { id: 9, text: 'Running a Terraria Server with Python' }
+                { id: 9, text: 'Terraria Server Project' }
         ]}
         ]
     },
@@ -232,7 +232,7 @@ Vue.component('next-previous-buttons', {
 })
 
 Vue.component('topic-nav', {
-    template: '<div class="category"><ul v-for="category in categories"><h1>{{ category.title }}</h1><li v-for="item in categories[category.id].content"><button @click="navButtonClick(item.id)">{{ item.text }}</button></li></ul></div>',
+    template: '<div class="categories"><ul v-for="category in categories"><h1>{{ category.title }}</h1><li v-for="item in category.content"><button @click="navButtonClick(item.id)">{{ item.text }}</button></li></ul></div>',
     methods: {
         navButtonClick(id) {
             store.commit('updateID', id)
