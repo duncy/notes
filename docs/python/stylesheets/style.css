@@ -239,6 +239,7 @@ main > section > section > div {
 main > section > section > div > div {
     padding-left: 2.5vw;
     padding-right: 2.5vw;
+    min-width: 35vw;
 }
 
 main > section > section > div > div > h1 {
@@ -346,6 +347,7 @@ p {
 /* Flex properties */
 .flex-container{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .flex-box{
