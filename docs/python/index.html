@@ -5,6 +5,8 @@
         <meta name="google-site-verification" content="yaEuPvHYAyzOFnrNFWAUe9ETg2Ha8rZbUxZ0l2fI44k" />
         <meta name="author" content="Duncan Fryer">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://duncy.nz/images/flightless.png" type="image/png" sizes="32x29">
+        <link rel="stylesheet" href="https://duncy.nz/stylesheets/universal-style.css">
         <link rel="stylesheet" href="stylesheets/style.css">
         <title>Tutor - Learning Python</title>
     </head>
@@ -12,51 +14,29 @@
         <div id="vue">
             <header>
                 <hamburger-button></hamburger-button>
-                <transition name="slide">
-                    <nav v-show="showHamburger">
-                        <ul>
-                            <li><h1><a href="https://tutor.duncy.nz">Tutor.Duncy.nz</a></h1></li>
-                        </ul>
-                        <div class="line"></div>
-                        <ul>
-                            <li><a href="https://github.com/alt1f923/tutor">Report typos</a></li>
-                        </ul>
-                        <div class="line"></div>
-                        <h1>Table of Contents</h1>
-                        <topic-nav></topic-nav>
-                        <div class="line"></div>
-                    </nav>
-                </transition>   
                 <h1>Learning Python</h1>
                 <h2>{{ title }}</h2>
                 <noscript>Please enable JavaScript in your browser.</noscript>
             </header>
-            <next-previous-buttons></next-previous-buttons>
-            <main class="flex-container">       
-                <nav class="flex-box">
-                    <h1>Table of Contents</h1>
-                    <topic-nav></topic-nav>
-                </nav>
-                <section class="flex-container flex-box columns">
-                    <sections
-                        v-for="item in sections"
-                        :item="item"
-                        :key="item.id">
-                    </sections>
-                </section>
+            <table-of-contents></table-of-contents>
+            <main class="flex-container flex-box columns">
+                <sections
+                    v-for="item in sections"
+                    :item="item"
+                    :key="item.id">
+                </sections>
+                <next-previous-buttons></next-previous-buttons>
             </main>
-            <next-previous-buttons></next-previous-buttons>
+            <footer>
+                <p>Duncan Fryer<br>© 2019 - 2020</p>
+                <ul>
+                    <li><a href="https://github.com/alt1f923">GitHub</a></li>
+                    <li><a href="https://discordapp.com">Дункан#5963</a></li>
+                </ul>
+            </footer>
         </div>
-        <footer>
-            Duncan Fryer<br>2019 - 2020
-            <ul>
-                <li><a href="https://github.com/alt1f923">GitHub</a></li>
-                <li><a href="https://twitter.com/le_epic_weasel">Twitter</a></li>
-                <li><a href="https://discordapp.com">Дункан#5963</a></li>
-            </ul>
-        </footer>
-        <script src="../scripts/vue.min.js"></script>
-        <script src="../scripts/vuex.min.js"></script>
+        <script src="https://duncy.nz/scripts/vue.min.js"></script>
+        <script src="https://duncy.nz/scripts/vuex.min.js"></script>
         <script src="scripts/main.js"></script>
     </body>
 </html>
