@@ -196,6 +196,12 @@
  .flex-box{
      flex: 1 
 }
+
+section .flex-container {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
  .columns {
      -webkit-flex-direction: column;
      flex-direction: column;
@@ -204,6 +210,9 @@
      margin-top: 1rem;
      margin-bottom: 1rem;
 }
+
+
+
 /* Style for section hyperlinked text */
  section a {
      text-decoration: none;
@@ -274,6 +283,12 @@
      header button, #hamburger, header label, header > nav > h1 {
          display: none;
     }
+
+    section .flex-container {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
+
      nav {
          position: relative;
          grid-area: nav;
