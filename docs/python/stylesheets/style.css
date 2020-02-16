@@ -23,7 +23,6 @@
      word-spacing: 0.15rem;
 }
  header {
-     color: black;
      position: fixed;
      top: 0;
      left: 0;
@@ -31,7 +30,7 @@
      height: 4rem;
      text-align: center;
      overflow: hidden;
-     background-color: rgb(95, 130, 200);
+     color: black;
      box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
  header h1 {
@@ -43,6 +42,7 @@
      font-size: 1rem;
 }
  nav {
+     color: black;
      position: fixed;
      top: 4rem;
      left: 0;
@@ -52,7 +52,6 @@
      width: -webkit-fit-content;
      width: -moz-fit-content;
      width: fit-content;
-     color: black;
      box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.3);
      overflow-y: scroll;
      border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -70,7 +69,6 @@
  .categories > ul > li {
      padding: 0.5rem;
 }
-
 
  main {
      margin-top: 4rem;
