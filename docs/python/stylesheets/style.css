@@ -288,8 +288,8 @@
     }
 
     .columns {
-        -webkit-flex-direction: column;
-        flex-direction: column;
+        -webkit-flex-direction: column !important;
+        flex-direction: column !important;
    }
 
      nav {
