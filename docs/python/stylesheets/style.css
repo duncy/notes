@@ -70,6 +70,8 @@
  .categories > ul > li {
      padding: 0.5rem;
 }
+
+
  main {
      margin-top: 4rem;
      min-height: calc(100vh - 4rem);
