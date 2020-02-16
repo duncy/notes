@@ -204,10 +204,6 @@
     flex-direction: column;
 }
 
- .columns {
-     -webkit-flex-direction: column;
-     flex-direction: column;
-}
  main > section, section .flex-box, p {
      margin-top: 1rem;
      margin-bottom: 1rem;
@@ -290,6 +286,11 @@
         -webkit-flex-direction: row;
         flex-direction: row;
     }
+
+    .columns {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+   }
 
      nav {
          position: relative;
