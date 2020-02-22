@@ -2,199 +2,204 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:800');
 /* Headings */
  h1, h2 {
-     font-weight: 400;
+    font-weight: 400;
 }
- button:hover {
-     text-decoration: underline;
-     cursor: pointer;
+button:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
- button:focus {
-     outline: none;
+button:focus {
+    outline: none;
 }
- button:disabled {
-     text-decoration: none;
-     color: gray !important;
+button:disabled {
+    text-decoration: none;
+    color: gray !important;
 }
- button:disabled:hover {
-     text-decoration: none;
-     cursor: initial;
+button:disabled:hover {
+    text-decoration: none;
+    cursor: initial;
 }
- p {
-     word-spacing: 0.15rem;
+p {
+    word-spacing: 0.15rem;
 }
- header {
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100vw;
-     height: 4rem;
-     text-align: center;
-     overflow: hidden;
-     color: black;
-     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+header {
+    background-color: rgb(80, 100, 145);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 4rem;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
- header h1 {
-     margin-top: 0.5rem;
-     font-size: 1.5rem;
-     line-height: 1.75rem;
+header h1 {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
 }
- header h2, noscript {
-     font-size: 1rem;
+header h2, noscript {
+    font-size: 1rem;
 }
- nav {
-     color: black;
-     position: fixed;
-     top: 4rem;
-     left: 0;
-     height: calc(100vh - 4rem);
-     text-align: left;
-     background-color: rgb(95, 130, 200);
-     width: -webkit-fit-content;
-     width: -moz-fit-content;
-     width: fit-content;
-     box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.3);
-     overflow-y: scroll;
-     border-top: 1px solid rgba(0, 0, 0, 0.1);
+nav {
+    color: white;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    height: calc(100vh - 4rem);
+    text-align: left;
+    background-color: rgb(80, 100, 145);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.3);
+    overflow-y: scroll;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
- .categories > ul {
-     padding: 1rem 1.5rem 1.5rem 1rem;
-     font-size: 1rem;
-     list-style-type: none;
-     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+.categories > ul {
+    padding: 1rem 1.5rem 1.5rem 1rem;
+    font-size: 1rem;
+    list-style-type: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
- .categories > ul > h1 {
-     padding-bottom: 1rem;
-     font-size: 1.5rem;
+.categories > ul > h1 {
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
 }
- .categories > ul > li {
-     padding: 0.5rem;
+.categories > ul > li {
+    padding: 0.5rem;
+}
+
+.categories button {
+    color: rgb(235, 235, 235);
 }
 
  main {
-     margin-top: 4rem;
-     min-height: calc(100vh - 4rem);
-     height: fit-content;
-     background-color: rgb(230, 230, 225);
-     color: black;
+    margin-top: 4rem;
+    min-height: calc(100vh - 4rem);
+    height: fit-content;
+    background-color: rgb(230, 230, 225);
+    color: black;
 }
 /* Images */
  picture > img {
-     padding-top: 1.5rem;
-     padding-bottom: 1.5rem;
-     width: 90vw;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 90vw;
 }
 /* Hamburger icon */
  #hamburger {
-     position: fixed;
-     left: 0.5rem;
-     top: 0.5rem;
-     height: 3rem;
-     width: 3rem;
-     transition: transform 0.05s cubic-bezier(1,.87,0,1.32);
+    position: fixed;
+    left: 0.5rem;
+    top: 0.5rem;
+    height: 3rem;
+    width: 3rem;
+    transition: transform 0.05s cubic-bezier(1,.87,0,1.32);
 }
 /* Hamburger icon active */
  #hamburger.active {
-     transform: translateX(-1.35rem);
+    transform: translateX(-1.35rem);
 }
 /* Hamburger icon lines */
  .hamburger-line {
-     background: black;
-     height: 0.5rem;
-     width: 3rem;
-     margin-bottom: 0.75rem;
+    background: white;
+    height: 0.5rem;
+    width: 3rem;
+    margin-bottom: 0.75rem;
 }
- .hamburger-line:nth-of-type(1), .hamburger-line:nth-of-type(3) {
-     transition: transform 0.5s cubic-bezier(1,.87,0,1.32);
+.hamburger-line:nth-of-type(1), .hamburger-line:nth-of-type(3) {
+    transition: transform 0.5s cubic-bezier(1,.87,0,1.32);
 }
- .hamburger-line:nth-of-type(2) {
-     transition: opacity 0.5s cubic-bezier(1,.87,0,1.32);
+.hamburger-line:nth-of-type(2) {
+    transition: opacity 0.5s cubic-bezier(1,.87,0,1.32);
 }
 /* Hamburger active icon lines */
  #hamburger.active > .hamburger-line:nth-of-type(1) {
-     transform: rotate(45deg) translate(1.8rem);
+    transform: rotate(45deg) translate(1.8rem);
 }
- #hamburger.active > .hamburger-line:nth-of-type(2) {
-     opacity: 0;
-     transition: opacity 0.05s cubic-bezier(1,.87,0,1.32);
+#hamburger.active > .hamburger-line:nth-of-type(2) {
+    opacity: 0;
+    transition: opacity 0.05s cubic-bezier(1,.87,0,1.32);
 }
- #hamburger.active > .hamburger-line:nth-of-type(3) {
-     transform: rotate(-45deg) translate(1.8rem);
+#hamburger.active > .hamburger-line:nth-of-type(3) {
+    transform: rotate(-45deg) translate(1.8rem);
 }
- #hamburger.active > .hamburger-line:nth-of-type(3), #hamburger.active > .hamburger-line:nth-of-type(1), #hamburger.active {
-     transition: transform 0.5s cubic-bezier(1,.87,0,1.32);
+#hamburger.active > .hamburger-line:nth-of-type(3), #hamburger.active > .hamburger-line:nth-of-type(1), #hamburger.active {
+    transition: transform 0.5s cubic-bezier(1,.87,0,1.32);
 }
 /* Nav Vue transition */
  nav.slide-enter-active {
-     transition: all .3s ease;
+    transition: all .3s ease;
 }
- nav.slide-leave-active {
-     transition: all .3s cubic-bezier(1,.17,0,1.32);
+nav.slide-leave-active {
+    transition: all .3s cubic-bezier(1,.17,0,1.32);
 }
- nav.slide-enter, nav.slide-leave-to {
-     transform: translateX(-80vw);
-     opacity: 0;
+nav.slide-enter, nav.slide-leave-to {
+    transform: translateX(-80vw);
+    opacity: 0;
 }
 /* Buttons */
  button {
-     text-decoration: none;
-     border: none;
-     font-size: inherit;
-     background: none;
-     text-align: left;
+    text-decoration: none;
+    border: none;
+    font-size: inherit;
+    background: none;
+    text-align: left;
 }
 /* Display block */
  iframe, img, span{
-     display: block;
+    display: block;
 }
 /* Margin auto */
  iframe, img, span, .code-block {
-     margin: auto;
+    margin: auto;
 }
 /* Iframes */
  iframe {
-     margin-top: 1.5rem;
-     width: 90vw;
-     height: 67vw;
+    margin-top: 1.5rem;
+    width: 90vw;
+    height: 67vw;
 }
 /* Style for code blocks */
  code {
-     background: rgb(220, 220, 215);
-     padding-left: 0.25rem;
-     padding-right: 0.25rem;
-     font-family: monospace;
+    background: rgb(220, 220, 215);
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    font-family: monospace;
 }
- .code-block {
-     background: rgb(220, 220, 215);
-     border-radius: 0.5rem;
-     padding: 1rem;
-     font-family: monospace;
-     overflow: auto;
-     word-wrap: normal;
-     max-width: 80vw;
+.code-block {
+    background: rgb(220, 220, 215);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-family: monospace;
+    overflow: auto;
+    word-wrap: normal;
+    max-width: 80vw;
 }
- .code-block > span {
-     display: inline;
-     padding: 0;
+.code-block > span {
+    display: inline;
+    padding: 0;
 }
- .comment {
-     color: rgb(75, 145, 70);
+.comment {
+    color: rgb(75, 145, 70);
 }
- .keyword {
-     color: rgb(215, 60, 75);
+.keyword {
+    color: rgb(215, 60, 75);
 }
- .operator {
-     color: rgb(0, 95, 200);
+.operator {
+    color: rgb(0, 95, 200);
 }
- .method {
-     color: rgb(115, 65, 195);
+.method {
+    color: rgb(115, 65, 195);
 }
 /* Flex properties */
  .flex-container{
-     display: flex;
-     flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
- .flex-box{
-     flex: 1 
+.flex-box{
+    flex: 1 
 }
 
 .flex-container {
@@ -203,51 +208,51 @@
 }
 
  main > section, section .flex-box, p {
-     margin-top: 1rem;
-     margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 
 
 /* Style for section hyperlinked text */
  section a {
-     text-decoration: none;
-     color: rgb(215, 90, 40);
+    text-decoration: none;
+    color: rgb(215, 90, 40);
 }
- section a:hover {
-     color: rgb(250, 180, 150);
-     cursor: pointer;
+section a:hover {
+    color: rgb(250, 180, 150);
+    cursor: pointer;
 }
- section a::selection {
-     color: rgb(200, 220, 255);
+section a::selection {
+    color: rgb(200, 220, 255);
 }
- section *::selection{
-     background: rgba(0, 0, 0, 0.7);
-     color: white;
+section *::selection{
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
 }
- section ul {
-     margin: 1rem;
+section ul {
+    margin: 1rem;
 }
- section li {
-     margin-left: 2rem;
-     list-style-type: square;
+section li {
+    margin-left: 2rem;
+    list-style-type: square;
 }
- section .flex-box {
-     min-width: 30vw;
-     margin-left: 1rem;
-     margin-right: 1rem;
+section .flex-box {
+    min-width: 30vw;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
- section > h1 {
-     margin: 1rem;
-     font-size: 1.75rem;
+section > h1 {
+    margin: 1rem;
+    font-size: 1.75rem;
 }
 
 .next-previous {
-        display: inline;
-        font-size: 2rem;
-        color: white;
-        padding: 1rem;;
-        text-align: center;
+       display: inline;
+       font-size: 2rem;
+       color: white;
+       padding: 1rem;;
+       text-align: center;
 }
 
 .next-previous button {
@@ -256,58 +261,59 @@
 
  @media screen and (min-width: 1100px){
     /* Iframes */
-     iframe {
-         width: 35vw;
-         height: 26vw;
+    iframe {
+        width: 35vw;
+        height: 26vw;
     }
-    /* Images */
-     picture > img {
-         width: 35vw;
+   /* Images */
+    picture > img {
+        width: 35vw;
     }
-     #vue {
-         display: grid;
-         grid-template-areas: 'nav header' 'nav main' 'footer footer';
+   #vue {
+        display: grid;
+        grid-template-areas: 'nav header' 'nav main' 'footer footer';
     }
-     header {
-         background-color: rgb(230, 230, 225);
-         position: initial;
-         width: unset;
-         grid-area: header;
-         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+   header {
+        color: black;
+        background-color: rgb(230, 230, 225);
+        position: initial;
+        width: unset;
+        grid-area: header;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
-    /* Hamburger menu */
-     header button, #hamburger, header label, header > nav > h1 {
-         display: none;
+   /* Hamburger menu */
+    header button, #hamburger, header label, header > nav > h1 {
+        display: none;
     }
 
     section > .flex-container {
-        -webkit-flex-direction: row;
-        flex-direction: row;
+       -webkit-flex-direction: row;
+       flex-direction: row;
     }
 
     .columns {
-        -webkit-flex-direction: column !important;
-        flex-direction: column !important;
+       -webkit-flex-direction: column !important;
+       flex-direction: column !important;
    }
 
-     nav {
-         position: relative;
-         grid-area: nav;
-         display: block !important;
-         top: initial;
-         left: initial;
-         height: initial;
-         width: initial;
-         box-shadow: -100px 15px 20px rgba(0, 0, 0, 0.3);
-         width: 18vw;
+    nav {
+        position: relative;
+        grid-area: nav;
+        display: block !important;
+        top: initial;
+        left: initial;
+        height: initial;
+        width: initial;
+        box-shadow: -100px 15px 20px rgba(0, 0, 0, 0.3);
+        width: 18vw;
     }
-     main {
-         grid-area: main;
-         margin-top: 0;
-         padding: 0 10rem 0 10rem;
-         width: calc(82vw - 20rem);
+   main {
+        grid-area: main;
+        margin-top: 0;
+        padding: 0 10rem 0 10rem;
+        width: calc(82vw - 20rem);
     }
-     footer {
-         grid-area: footer;
+   footer {
+        grid-area: footer;
     }
 }
