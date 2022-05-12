@@ -1,0 +1,15 @@
+following https://gist.github.com/derrod/333fb5218002347435b7f31d532cbd01
+
+i am using the lutris-fshack-6.21-6-x86_64 version of wine, any version should work though
+
+esync and fsync are enabled
+
+before i used the wine desktop so i could run the game launch command from within the wine cmd
+
+to circumvent this, i use a .bat file inside battlefronts wine prefix and run it via the linux terminal while origin is running
+
+WINEESYNC=1 WINEPREFIX=/run/media/duncanf/382808f9-c795-49e0-ada4-1ae02e9594c7/Games/star-wars-battlefront-ii-2017 /home/duncanf/.local/share/lutris/runners/wine/lutris-fshack-6.21-5-x86_64/bin/wine64 /run/media/duncanf/382808f9-c795-49e0-ada4-1ae02e9594c7/Games/star-wars-battlefront-ii-2017/drive_c/users/Public/Desktop/swbf2.bat
+
+this achieves more or less the same effect as running it in the wine desktop cmd however comes with none of the drawbacks of the desktop environment
+
+all that is next is to configure dwm to make origin float by default (would also fix jedi fallen order)
